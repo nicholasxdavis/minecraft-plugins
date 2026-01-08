@@ -1,5 +1,0 @@
-ALTER TABLE auraskills_users
-    ADD COLUMN last_updated TIMESTAMP
-        NOT NULL
-        DEFAULT CURRENT_TIMESTAMP
-        ON UPDATE CURRENT_TIMESTAMP;

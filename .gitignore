@@ -4,6 +4,9 @@
 **/*README*
 **/*readme*
 
+# Exclude all JAR files
+**/*.jar
+
 # Common build artifacts (optional but recommended)
 **/target/
 **/build/
@@ -27,4 +30,13 @@ Thumbs.db
 **/maven-temp/
 **/.gradle/
 **/gradle-wrapper/
+
+# Excluded plugins/folders
+plugins/PandoraBases/
+plugins/bloodmoon-master/
+plugins/WorldBorder-master/
+plugins/SimpleScore-main/
+plugins/LevelledMobs-maste/
+plugins/AuraSkills-master/
+ranks/SlimeRanks-master/
 
