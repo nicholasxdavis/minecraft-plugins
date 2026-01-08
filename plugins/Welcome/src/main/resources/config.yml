@@ -1,0 +1,41 @@
+# Welcome Plugin Configuration
+
+# Welcome messages on join
+welcome:
+  enabled: true
+  first-join-message:
+    - "&e&l━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "&7    Welcome to &e&lPandora&7!"
+    - ""
+    - "&7A custom factions server inspired by"
+    - "&7old-school factions with never seen"
+    - "&7before plugins and features!"
+    - ""
+    - "&e&l━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  return-join-message:
+    - "&7Welcome back to &e&lPandora&7!"
+    - "&7Type &6/tips &7to toggle helpful tips"
+  
+  # Give welcome booklet on first join
+  give-booklet: true
+  booklet-title: "&6&lPlayPandora Guide"
+  booklet-author: "PlayPandora Staff"
+
+# Tips system
+tips:
+  enabled: true
+  # Delay between tips (in seconds)
+  tip-delay: 120
+  # Tips to show
+  tip-messages:
+    - "&7Tip: Use &6/pet &7to access the pet shop!"
+    - "&7Tip: Use &6/sell &7to open the sell GUI!"
+    - "&7Tip: Use &6/farm &7to access the farm shop!"
+    - "&7Tip: Use &6/perks &7to browse and purchase perks!"
+    - "&7Tip: Use &6/base create &7to create your base!"
+
+# Hook integration
+hook:
+  enabled: true
+  use-welcome-title: true
+

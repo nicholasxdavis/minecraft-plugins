@@ -1,0 +1,7 @@
+name: TotemLimit
+version: 1.0.0
+main: com.playpandora.totemlimit.TotemLimit
+api-version: 1.21
+author: PlayPandora
+description: Limits players to one totem of undying, prevents shields, and enables 1.7/1.8 style sword blocking
+

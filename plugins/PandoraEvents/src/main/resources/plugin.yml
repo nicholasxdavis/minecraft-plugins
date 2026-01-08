@@ -1,0 +1,33 @@
+name: PandoraEvents
+version: ${project.version}
+api-version: 1.13
+main: com.pandora.events.PandoraEventsPlugin
+authors: [PandoraDev]
+depend: [PandoraBases]
+commands:
+  basevent:
+    description: Manage event bases
+    aliases: [bevent, event]
+    permission: pandoraevents.use
+permissions:
+  pandoraevents.use:
+    description: Basic permission to use event commands
+    default: op
+  pandoraevents.spawn:
+    description: Permission to spawn event bases
+    default: op
+  pandoraevents.tp:
+    description: Permission to teleport to active events
+    default: op
+  pandoraevents.admin:
+    description: Permission to manage auto-events
+    default: op
+  pandoraevents.*:
+    description: All PandoraEvents permissions
+    children:
+      pandoraevents.use: true
+      pandoraevents.spawn: true
+      pandoraevents.tp: true
+      pandoraevents.admin: true
+    default: op
+

@@ -1,0 +1,110 @@
+# PandoraSpawners Shop Configuration
+# This file is used by BuyGUI to display spawner prices
+
+Settings:
+  Buy:
+    Enabled: true
+    Rows: 4
+    Filler: PURPLE_STAINED_GLASS_PANE
+    Amount:
+      First: 1
+      Second: 16
+      Third: 64
+    Buyable:
+      First: true
+      Second: true
+      Third: true
+      Maximum: true
+    Items:
+      Next: SPECTRAL_ARROW
+      Previous: SPECTRAL_ARROW
+      Page: PAPER
+
+Shop:
+  Buy:
+    # S/S+ TIER — ENDGAME META
+    WITHER_SKELETON:
+      Toggle: true
+      Cost: 6500000  # 6.5M
+    SHULKER:
+      Toggle: true
+      Cost: 7500000  # 7.5M
+    GUARDIAN:
+      Toggle: true
+      Cost: 5200000  # 5.2M
+    ENDERMAN:
+      Toggle: true
+      Cost: 4500000  # 4.5M
+    BLAZE:
+      Toggle: true
+      Cost: 4200000  # 4.2M
+    EVOKER:
+      Toggle: true
+      Cost: 6000000  # 6.0M
+    VILLAGER:
+      Toggle: true
+      Cost: 6800000  # 6.8M
+    
+    # A–A+ TIER — MID–LATE GAME META
+    SKELETON:
+      Toggle: true
+      Cost: 3800000  # 3.8M
+    ZOMBIE_VILLAGER:
+      Toggle: true
+      Cost: 2800000  # 2.8M
+    WITCH:
+      Toggle: true
+      Cost: 3000000  # 3.0M
+    PIGLIN:
+      Toggle: true
+      Cost: 2500000  # 2.5M
+    ZOMBIFIED_PIGLIN:
+      Toggle: true
+      Cost: 2600000  # 2.6M
+    VINDICATOR:
+      Toggle: true
+      Cost: 2900000  # 2.9M
+    RAVAGER:
+      Toggle: true
+      Cost: 3400000  # 3.4M
+    IRON_GOLEM:
+      Toggle: true
+      Cost: 3800000  # 3.8M
+    BEE:
+      Toggle: true
+      Cost: 2500000  # 2.5M
+    
+    # B TIER — STILL META-USABLE
+    SLIME:
+      Toggle: true
+      Cost: 1500000  # 1.5M
+    COW:
+      Toggle: true
+      Cost: 1000000  # 1.0M
+    SHEEP:
+      Toggle: true
+      Cost: 1000000  # 1.0M
+    SQUID:
+      Toggle: true
+      Cost: 1200000  # 1.2M
+    TURTLE:
+      Toggle: true
+      Cost: 1500000  # 1.5M
+    MUSHROOM_COW:
+      Toggle: true
+      Cost: 1200000  # 1.2M
+    
+    # PRESTIGE TIER — HARDCORE ENDGAME
+    WARDEN:
+      Toggle: true
+      Cost: 10000000  # 10M
+    WITHER:
+      Toggle: true
+      Cost: 8000000  # 8M
+    
+    # EMPTY SPAWNER (disabled by default)
+    EMPTY:
+      Toggle: false
+      Cost: 1000
+
+

@@ -1,0 +1,87 @@
+# EssHats Configuration File
+# This file contains all customizable settings for the EssHats plugin
+
+# Plugin Settings
+settings:
+  # Message prefix used in all plugin messages
+  # Use & for color codes (e.g., &e&lServer &8»)
+  prefix: "&e&lEssHats &8»"
+  
+  # GUI Settings
+  gui:
+    # Title of the hat selection GUI
+    title: "&e&lHats"
+    # Size of the GUI (9, 18, 27, 36, 45, or 54)
+    size: 54
+    # Material used for GUI borders
+    border-material: "GRAY_STAINED_GLASS_PANE"
+    # Close button settings
+    close-button:
+      material: "BARRIER"
+      name: "&c✖ Close"
+      lore:
+        - "&7Click to close"
+  
+  # Sound Settings
+  sounds:
+    # Sound played when opening the GUI
+    # Format: SOUND_NAME:volume:pitch (e.g., UI_TOAST_IN:0.5:1.0)
+    gui-open: "UI_TOAST_IN:0.5:1.0"
+    # Sound played when clicking buttons
+    button-click: "UI_BUTTON_CLICK:0.5:1.0"
+    # Sound played when equipping a hat
+    hat-equip: "ENTITY_PLAYER_LEVELUP:0.5:1.5"
+    # Sound played when permission is denied
+    permission-denied: "ENTITY_VILLAGER_NO:0.5:1.0"
+    # Sound played when removing a hat
+    hat-remove: "UI_BUTTON_CLICK:0.5:1.0"
+  
+  # Item Display Settings
+  items:
+    # Color code for hat display names in GUI
+    hat-name-color: "&6"
+    # Text shown in hat lore (Click to equip)
+    click-to-equip: "&eClick to equip!"
+    # Color code for hat descriptions
+    description-color: "&7"
+
+# Messages
+# All messages support color codes using &
+messages:
+  # Message when a player doesn't have permission to use the command
+  no-permission: "&cYou don't have permission to use this command!"
+  
+  # Message when command is used by non-player
+  players-only: "&7This command can only be used by players!"
+  
+  # Message when player has no hat permissions
+  no-hat-permissions: "&cYou don't have permission to use any hats!"
+  
+  # Message when player doesn't have permission for a specific tier
+  # {tier} will be replaced with the tier name (e.g., S-Tier)
+  no-tier-permission: "&cYou don't have permission to use &6{tier} &7hats!"
+  
+  # Message when a hat is equipped
+  # {hat} will be replaced with the hat name
+  hat-equipped: "&7You have equipped the &6{hat} &7hat!"
+  
+  # Message when a hat is removed
+  hat-removed: "&7You have removed your hat!"
+  
+  # Message when hat command fails
+  command-failed: "&cFailed to execute hat command: &7{error}"
+
+# Hat Tiers Configuration
+# You can customize tier labels and descriptions here
+tiers:
+  s:
+    label: "&e&lPure Flex / Rare"
+  a:
+    label: "&e&lRare / Thematic"
+  b:
+    label: "&e&lRecognizable & Fun"
+  c:
+    label: "&e&lFunny / Meme Hats"
+  d:
+    label: "&e&lPure Chaos / Troll"
+

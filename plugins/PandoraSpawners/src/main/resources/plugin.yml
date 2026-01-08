@@ -1,0 +1,101 @@
+name: PandoraSpawners
+main: com.pandora.spawners.PandoraSpawners
+depend: [PandoraBases]
+softdepend: [Vault, WildStacker, WildTools, ShopGUIPlus, SuperiorSkyblock2, PlayerPoints, PlotSquared, WorldEdit]
+api-version: 1.19
+version: 1.0.0-SNAPSHOT
+author: Pandora
+folia-supported: true
+commands:
+  pandoraspawners:
+    description: PandoraSpawners provided command.
+    permission: pandoraspawners.sm
+    aliases: [ps, spawners]
+permissions:
+  pandoraspawners.sm:
+     description: Allow players to manipulate with this plugin
+     default: op
+  pandoraspawners.command.view:
+     description: Allow to open spawner view
+     default: true
+  pandoraspawners.command.shop:
+     description: Allow to open spawners shop
+     default: true
+  pandoraspawners.command.drops:
+     description: Allow to get spawner drops
+     default: true
+  pandoraspawners.command.locations:
+     description: Allow to view spawner locations
+     default: true
+  pandoraspawners.command.trust:
+     description: Allow to manipulate with spawner trusted players
+     default: true
+  pandoraspawners.eggs:
+     description: Allow players to use eggs to change spawner type
+     default: op
+  pandoraspawners.stacking:
+     description: Allow players to stack spawners
+     default: true
+  pandoraspawners.place:
+     description: Allow players to place spawners
+     default: true
+  pandoraspawners.break:
+     description: Allow players to break spawners
+     default: true
+  pandoraspawners.breaking.bypass.silktouch:
+     description: Allow players to bypass silk touch requirement
+     default: false
+  pandoraspawners.unbreakable.bypass:
+     description: Allow players to bypass unbreakable spawners
+     default: false
+  pandoraspawners.upgrades.open:
+     description: Allow players to open spawner upgrades
+     default: true
+  pandoraspawners.upgrades.buy:
+     description: Allow players to upgrade spawners
+     default: true
+  pandoraspawners.shop.buy.open:
+     description: Allow players to open spawner buy shop
+     default: true
+  pandoraspawners.shop.buy.purchase:
+     description: Allow players to purchase spawners
+     default: true
+  pandoraspawners.shop.sell.open:
+     description: Allow players to open spawner sell shop
+     default: true
+  pandoraspawners.shop.selection.open:
+     description: Allow players to open spawner shop selector
+     default: true
+  pandoraspawners.ownership.bypass.limit:
+     description: Allow players to bypass spawner owning limit
+     default: false
+  pandoraspawners.ownership.bypass.breaking:
+     description: Allow players to bypass owned spawner breaking canceling
+     default: false
+  pandoraspawners.ownership.bypass.stacking:
+     description: Allow players to bypass owned spawner stacking canceling
+     default: false
+  pandoraspawners.ownership.bypass.changing:
+     description: Allow players to bypass owned spawner changing with an egg canceling
+     default: false
+  pandoraspawners.ownership.bypass.interact:
+     description: Allow players to bypass owned spawner upgrade opening canceling
+     default: false
+  pandoraspawners.ownership.bypass.upgrading:
+     description: Allow players to bypass owned spawner upgrading canceling
+     default: false
+  pandoraspawners.natural.bypass.breaking:
+     description: Allow players to bypass natural spawner breaking canceling
+     default: false
+  pandoraspawners.natural.bypass.stacking:
+     description: Allow players to bypass natural spawner stacking canceling
+     default: false
+  pandoraspawners.natural.bypass.changing:
+     description: Allow players to bypass natural spawner changing with an egg canceling
+     default: false
+  pandoraspawners.natural.bypass.interact:
+     description: Allow players to bypass natural spawner upgrade opening canceling
+     default: false
+  pandoraspawners.natural.bypass.upgrading:
+     description: Allow players to bypass natural spawner upgrading canceling
+     default: false

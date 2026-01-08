@@ -1,0 +1,7 @@
+name: NoNerfs
+version: 1.0.0
+main: com.playpandora.nonerfs.NoNerfs
+api-version: 1.21
+author: PlayPandora
+description: Disables weakness, slowness, and blindness effects. Increases player speed, reduces food loss, and increases reach.
+

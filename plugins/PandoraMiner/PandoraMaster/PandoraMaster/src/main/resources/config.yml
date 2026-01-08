@@ -1,0 +1,73 @@
+messages:
+  prefix: "&ePandora"
+  clock-given: "&ePandora &7You have received your hub menu item!"
+  no-permission: "&ePandora &7You don't have permission to use this!"
+
+gui:
+  title: "&8Hub Menu"
+  stats:
+    title: "&7Your Stats"
+    kills: "&7Kills: &6%kills%"
+    deaths: "&7Deaths: &6%deaths%"
+    mobkills: "&7Mobs Killed: &6%mobkills%"
+    totalmoney: "&7Lifetime Earnings: &6$%totalmoney%"
+    joined: "&7Joined: &6%joined%"
+
+items:
+  clock:
+    name: "&e&lHub Menu"
+    lore:
+      - "&7Right-click to open"
+      - "&7the hub menu"
+  
+  spawn:
+    name: "&eTeleport to Spawn"
+    lore:
+      - "&7Click to teleport to spawn"
+  
+  homes:
+    name: "&ePlayer Homes"
+    lore:
+      - "&7Click to view your homes"
+  
+  base:
+    name: "&eBase"
+    lore:
+      - "&7Click to manage your base"
+    locked:
+      name: "&7Base &8(Locked)"
+      lore:
+        - "&7You must be in a base"
+        - "&7to access this menu"
+  
+  petshop:
+    name: "&ePet Shop"
+    lore:
+      - "&7Click to open the pet shop"
+  
+  perkshop:
+    name: "&ePerk Shop"
+    lore:
+      - "&7Click to open the perk shop"
+  
+  farmshop:
+    name: "&eFarm Shop"
+    lore:
+      - "&7Click to open the farm shop"
+  
+  skills:
+    name: "&eSkills"
+    lore:
+      - "&7Click to view your skills"
+  
+  sellgui:
+    name: "&eSell GUI"
+    lore:
+      - "&7Click to open the sell menu"
+  
+  close:
+    name: "&c✖ Close"
+    lore:
+      - "&7Click to close this menu"
+
+

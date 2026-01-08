@@ -1,0 +1,22 @@
+name: PandoraWorldLock
+version: ${project.version}
+main: com.playpandora.pandoraworldlock.PandoraWorldLock
+api-version: 1.21
+author: Pandora
+description: Locks worlds dynamically with admin commands
+
+commands:
+  pwl:
+    description: Main command for Pandora WorldLock
+    usage: /<command> [lock|unlock|list|info|reload] [args...]
+    permission: pandoraworldlock.admin
+    aliases: [worldlock, pandoraworldlock]
+
+permissions:
+  pandoraworldlock.admin:
+    description: Allows use of Pandora WorldLock admin commands
+    default: op
+
+
+
+

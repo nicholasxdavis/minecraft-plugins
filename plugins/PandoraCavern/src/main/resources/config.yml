@@ -1,0 +1,24 @@
+# PandoraCavern Configuration
+
+# Visual Settings
+visuals:
+  prefix: "&e&lPandora &8» &r"
+  header: "&e&l"
+  highlight: "&6"
+  text: "&7"
+  error: "&c"
+
+# Respawn Settings
+respawn-delay: 7 # seconds
+
+# Loot Items (food items that drop when mining special netherite ore)
+loot:
+  - "COOKED_BEEF:3"
+  - "GOLDEN_APPLE:1"
+  - "COOKED_PORKCHOP:2"
+  - "BAKED_POTATO:4"
+  - "COOKED_CHICKEN:2"
+  - "MUSHROOM_STEW:1"
+
+
+

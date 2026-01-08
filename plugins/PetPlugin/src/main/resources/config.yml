@@ -1,0 +1,144 @@
+# PetPlugin Configuration
+
+# Shop Settings
+shop:
+  title: "&8Pet Shop"
+  size: 54
+
+# Pet Settings
+pets:
+  # Health threshold for pets to run away (0.0 to 1.0, where 0.2 = 20% health)
+  run-away-health-threshold: 0.2
+  # Teleport pets to player when they get too far (blocks)
+  teleport-distance: 50
+  # Auto-heal pets over time (health per second)
+  auto-heal-rate: 0.5
+  # Prevent pets from taking damage
+  prevent-damage: true
+  # Prevent pets from dying
+  prevent-death: true
+
+# Pet Types Configuration
+pet-types:
+  horse:
+    enabled: true
+    name: "&6Horse"
+    description:
+      - "&7A loyal steed for transportation"
+      - "&7Faster and stronger than vanilla horses"
+    price: 24000.0  # Balanced
+    material: SADDLE
+    slot: 10
+    required-level: 30
+    # Horse stats
+    max-health: 30.0
+    movement-speed: 0.35
+    jump-strength: 1.0
+    # Horse attributes
+    strength: 1.0
+    
+  dog:
+    enabled: true
+    name: "&6Guard Dog"
+    description:
+      - "&7A loyal companion for security"
+      - "&7Stronger and smarter than vanilla dogs"
+    price: 16000.0  # Balanced
+    material: BONE
+    slot: 12
+    required-level: 20
+    # Dog stats
+    max-health: 25.0
+    attack-damage: 8.0
+    attack-speed: 1.5
+    # Dog attributes
+    strength: 1.5
+    follow-range: 32.0
+    
+  cat:
+    enabled: true
+    name: "&6Lucky Cat"
+    description:
+      - "&7Grants speed boost and 2 extra hearts"
+      - "&7A mystical companion"
+    price: 32000.0  # Balanced
+    material: SALMON
+    slot: 14
+    required-level: 35
+    # Cat stats
+    max-health: 20.0
+    speed-boost-level: 1
+    extra-hearts: 2
+    # Cat attributes
+    speed-multiplier: 1.2
+    
+  wolf:
+    enabled: true
+    name: "&6Wolf Companion"
+    description:
+      - "&7A fierce protector"
+      - "&7Enhanced combat abilities"
+    price: 19200.0  # Balanced
+    material: ROTTEN_FLESH
+    slot: 16
+    required-level: 25
+    # Wolf stats
+    max-health: 22.0
+    attack-damage: 6.0
+    attack-speed: 1.3
+    
+  parrot:
+    enabled: true
+    name: "&6Parrot"
+    description:
+      - "&7A colorful companion"
+      - "&7Grants night vision effect"
+    price: 8000.0  # Balanced
+    material: COOKED_CHICKEN
+    slot: 28
+    required-level: 15
+    # Parrot stats
+    max-health: 6.0
+    night-vision-level: 1
+    
+  fox:
+    enabled: true
+    name: "&6Fox"
+    description:
+      - "&7A clever companion"
+      - "&7Grants invisibility when sneaking"
+    price: 12800.0  # Balanced
+    material: SWEET_BERRIES
+    slot: 30
+    required-level: 18
+    # Fox stats
+    max-health: 20.0
+    invisibility-on-sneak: true
+
+# Messages
+messages:
+  prefix: "&ePandora"
+  no-permission: "{prefix} &7You don't have permission to use this command."
+  pet-purchased: "{prefix} &7You purchased &6{pet_name}&7!"
+  pet-already-owned: "{prefix} &7You already own this pet type."
+  pet-spawned: "{prefix} &7Your pet &6{pet_name} &7has been spawned!"
+  pet-despawned: "{prefix} &7Your pet has been despawned."
+  pet-renamed: "{prefix} &7Your pet has been renamed to &6{new_name}&7!"
+  pet-not-found: "{prefix} &7Pet not found. Use &6/pet list &7to see your pets."
+  pet-low-health: "{prefix} &7Your pet is low on health and has run away!"
+  pet-died: "{prefix} &7Your pet has died and been removed. Purchase a new one from &6/pet&7."
+  cannot-hurt-own-pet: "{prefix} &7You cannot hurt your own pet!"
+  no-pets-owned: "{prefix} &7You don't own any pets yet. Use &6/pet &7to buy one!"
+  insufficient-funds: "{prefix} &7Insufficient funds! You need &6{amount} &7more."
+  pet-already-spawned: "{prefix} &7You already have a pet spawned. Despawn it first with &6/pet despawn&7."
+  cat-extra-life-used: "{prefix} &7Your cat saved you! &6{remaining} &7extra lives remaining."
+  pet-released: "{prefix} &7You released &6{pet_name}&7. The pet is gone forever."
+  pet-revived: "{prefix} &7You revived &6{pet_name} &7for &6{cost}&7!"
+  revive-too-late: "{prefix} &7Too late! You can only revive pets within 6 hours of death."
+  level-required: "{prefix} &7You need to be level &6{required} &7to purchase this pet! You are level &6{current}&7."
+
+# Revive Settings
+revive:
+  cost: 50000.0  # Balanced
+  time-limit-hours: 6
+

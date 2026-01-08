@@ -1,0 +1,16 @@
+name: ChatManager
+version: 1.0.0
+main: com.playpandora.chatmanager.ChatManager
+api-version: 1.21
+author: PlayPandora
+description: Chat formatting plugin with PlaceholderAPI support
+
+commands:
+  clearchat:
+    description: Clear the chat for all players
+    usage: /<command>
+    aliases: [cc, chatclear]
+
+softdepend: [PlaceholderAPI, Essentials, LevelPlugin]
+
+

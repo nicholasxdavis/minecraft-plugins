@@ -1,0 +1,24 @@
+name: CraftAccess
+version: 1.0.0
+main: com.playpandora.craftaccess.CraftAccess
+api-version: 1.21
+author: PlayPandora
+description: Remote access to crafting tables, enchantment tables, and anvils with level requirements
+
+commands:
+  craft:
+    description: Open a crafting table remotely
+    usage: /<command>
+    aliases: [crafting, workbench]
+  enchant:
+    description: Open an enchantment table remotely
+    usage: /<command>
+    aliases: [enchanting, enchanttable]
+  anvil:
+    description: Open an anvil remotely
+    usage: /<command>
+    aliases: [repair]
+
+softdepend: [LevelPlugin]
+
+

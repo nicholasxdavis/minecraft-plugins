@@ -1,0 +1,161 @@
+# MoreEnd Configuration
+
+features:
+  # Mob Behavior Tweaks
+  enderman-behavior:
+    enabled: true
+    faster-follow-multiplier: 1.2  # +20%
+    teleport-behind-chance: 0.3  # 30% chance
+    hover-stare-ticks: 60  # 3 seconds
+    void-edge-aggression: true
+  
+  shulker-behavior:
+    enabled: true
+    fire-rate-multiplier: 1.15  # +15%
+    teleport-less: true
+    shell-drop-multiplier: 1.2  # +20%
+  
+  endermite-behavior:
+    enabled: true
+    aggro-radius-multiplier: 1.5  # +50%
+    pearl-teleport-spawn-min: 3
+    pearl-teleport-spawn-max: 6
+    pearl-drop-chance: 0.15  # 15%
+  
+  # Spawn Rate Adjustments
+  spawn-rates:
+    enabled: true
+    enderman-void-edge-multiplier: 2.0  # 2x near void
+    shulker-city-multiplier: 2.0  # 2x in cities
+    endermite-pearl-spawn: true
+  
+  # Drop Rate Increases
+  drop-rates:
+    enabled: true
+    enderman-pearl-multiplier: 1.4  # +40%
+    shulker-shell-multiplier: 1.2  # +20%
+    phantom-membrane-multiplier: 1.5  # +50%
+    endermite-pearl-chance: 0.15  # 15%
+    chorus-regrowth-multiplier: 1.3  # +30% faster
+  
+  # Void Mechanics
+  void-mechanics:
+    enabled: true
+    enderman-spawn-near-void: true
+    camera-shake-enabled: true
+    camera-shake-intensity: 0.1  # 0.0 to 1.0
+    camera-shake-distance: 5  # blocks from void edge
+  
+  # Phase 2: Horror Systems
+  horror-atmosphere:
+    enabled: true
+    end-ambience:
+      enabled: true
+      enderman-scream-chance: 0.04  # 4% per check
+      chorus-breaking-chance: 0.02  # 2% per check
+      portal-hum-chance: 0.01  # 1% per check
+      check-interval-ticks: 50  # Check every 2.5 seconds
+    void-pressure:
+      enabled: true
+      enderman-spawn-near-void: true
+      dragon-scream-chance: 0.03  # 3% per check
+      camera-shake-enabled: true
+      camera-shake-intensity: 0.1
+      camera-shake-distance: 5  # blocks from void edge
+    phantom-invasions:
+      enabled: true
+      end-only: true
+      silent-phantoms: true
+      drop-from-sky: true
+  
+  # Enhanced Stalker AI
+  stalker-ai:
+    enabled: true
+    enderman:
+      teleport-behind-frequency: 0.4  # 40% chance
+      freeze-stare-ticks: 60  # 3 seconds
+      group-aggro-sync: true
+      void-edge-aggression: true
+      silent-clusters: true  # No idle noise in groups
+    shulker:
+      enhanced-behavior: true
+    endermite:
+      enhanced-swarm: true
+  
+  # Phase 3: Events & World Features
+  events:
+    enabled: true
+    end-storm:
+      enabled: true
+      duration-seconds: 120
+      trigger-chance: 0.03
+      check-interval-seconds: 400
+      chorus-pop-chance: 0.1  # 10% per check
+      enderman-wild-teleport: true
+      phantom-waves: true
+      sky-darken: true
+      drop-multiplier: 1.5  # +50%
+    shulker-infestation:
+      enabled: true
+      duration-seconds: 180
+      trigger-chance: 0.02
+      check-interval-seconds: 600
+      shulker-multiplier: 2.0  # 2x Shulkers
+      fire-rate-multiplier: 1.5  # +50%
+      shell-drop-multiplier: 2.0  # 2x shells
+    enderman-tide:
+      enabled: true
+      trigger-on-chorus-break: true
+      break-threshold: 10  # Break 10+ chorus = trigger
+      spawn-count: 25  # 15-40 Endermen
+      neutral-until-provoked: true
+    void-geysers:
+      enabled: true
+      knockback-strength: 1.5
+      pulse-interval-ticks: 40  # Every 2 seconds
+      distance-from-void: 3  # blocks
+  
+  # Phase 4: Advanced Mechanics
+  advanced-ai:
+    enabled: true
+    enderman:
+      teleport-chain-reactions: true
+      predictive-teleport: true
+      group-coordination: true
+      block-pickup-frequency: 1.5  # 1.5x more often
+    shulker:
+      homing-bullets: true
+      homing-strength: 0.3  # 0.0 to 1.0
+      less-teleporting: true
+      coordinated-fire: true
+    endermite:
+      enhanced-swarm: true
+      aggro-chain: true
+  
+  # Event Coordination
+  event-coordination:
+    enabled: true
+    allow-overlap: true
+    max-overlapping: 3
+    intensity-scaling: true
+    player-based-triggers: true
+  
+  # Void Mechanics Enhancement
+  void-mechanics:
+    enabled: true
+    progressive-danger: true
+    danger-zones: true
+    visual-feedback: true
+    audio-feedback: true
+
+# Plugin Integrations
+integrations:
+  levelplugin:
+    enabled: true
+    end-xp-multiplier: 2.0  # 2x XP for kills in End
+  levelledmobs:
+    enabled: true
+    apply-levels: true  # Apply LevelledMobs to spawned mobs
+  quest-system:
+    enabled: true  # Integrate with qab.sk quest system
+

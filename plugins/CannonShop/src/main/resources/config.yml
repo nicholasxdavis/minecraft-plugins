@@ -1,0 +1,111 @@
+# CannonShop Configuration
+
+# Shop Settings
+shop:
+  title: "&8Cannon Shop"
+  size: 54
+
+# Cannons
+cannons:
+  basic:
+    name: "&6Basic Cannon"
+    description:
+      - "&7A simple cannon design"
+      - "&7Perfect for beginners!"
+      - ""
+      - "&7Price: &6${price}"
+    price: 120000  # Increased by 20%
+    paste-id: "RBMySRjmAcneV61K8XF1"
+    item:
+      material: "TNT"
+      display-name: "&6Basic Cannon Placer"
+      lore:
+        - "&7Right-click to place this cannon"
+        - "&7at your current location!"
+  
+  scattershot:
+    name: "&6Scattershot Cannon"
+    description:
+      - "&7A cannon that fires multiple shots"
+      - "&7Great for area damage!"
+      - ""
+      - "&7Price: &6${price}"
+    price: 180000  # Increased by 20%
+    paste-id: "LiK1E307ZYh1zVYdsC7s"
+    item:
+      material: "TNT_MINECART"
+      display-name: "&6Scattershot Cannon Placer"
+      lore:
+        - "&7Right-click to place this cannon"
+        - "&7at your current location!"
+  
+  sniper:
+    name: "&6Powerful Sniper Cannon"
+    description:
+      - "&7A long-range precision cannon"
+      - "&7Extreme range and accuracy!"
+      - ""
+      - "&7Price: &6${price}"
+    price: 300000  # Increased by 20%
+    paste-id: "VDh9BSkNGsGIHxRCPuiC"
+    item:
+      material: "DISPENSER"
+      display-name: "&6Powerful Sniper Cannon Placer"
+      lore:
+        - "&7Right-click to place this cannon"
+        - "&7at your current location!"
+  
+  shotgun:
+    name: "&6Powerful Shotgun Cannon"
+    description:
+      - "&7A close-range devastating cannon"
+      - "&7Massive damage up close!"
+      - ""
+      - "&7Price: &6${price}"
+    price: 240000  # Increased by 20%
+    paste-id: "ajWrtMjtMGytjqAjXpSu"
+    item:
+      material: "DROPPER"
+      display-name: "&6Powerful Shotgun Cannon Placer"
+      lore:
+        - "&7Right-click to place this cannon"
+        - "&7at your current location!"
+
+# Special Items
+special-items:
+  creeper-eggs:
+    name: "&eCreeper Eggs"
+    description:
+      - "&7Custom explosive creeper eggs"
+      - "&7Can destroy &6ANY blocks&7, including"
+      - "&7claimed territory!"
+      - ""
+      - "&7Price: &6${price}"
+      - "&7Amount: &6x5"
+    price: 750000
+    amount: 5
+    item:
+      material: "CREEPER_SPAWN_EGG"
+      display-name: "&eCreeper Egg"
+      lore:
+        - "&7Right-click while facing air to throw"
+        - "&7the creeper egg. It will explode on impact"
+        - "&7and can destroy &6ANY blocks&7, including"
+        - "&7claimed territory."
+        - ""
+        - "&e⚠ Warning: Use with caution!"
+
+# Messages
+messages:
+  prefix: "&ePandora"
+  purchase-success: "{prefix} &7You purchased &6{item} &7! Check your inventory."
+  insufficient-funds: "{prefix} &7You don't have enough money! You need &6${required} &7but you have &6${balance}"
+  no-permission: "{prefix} &7You don't have permission to use this command."
+  cannon-placed: "{prefix} &7Cannon placed successfully at your location!"
+  cannon-already-placed: "{prefix} &7You already have a cannon placer in your inventory!"
+  buildpaste-not-found: "{prefix} &7BuildPaste plugin not found! Please contact an administrator."
+  console-command-error: "{prefix} &7Error executing cannon placement. Please contact an administrator."
+  pandoraceggs-not-found: "{prefix} &7PandoraCeggs plugin not found! Creeper eggs unavailable."
+  cannot-paste-protected: "{prefix} &cYou cannot paste cannons in protected areas!"
+  cannot-paste-in-claimed: "{prefix} &cYou cannot paste cannons in claimed territories!"
+

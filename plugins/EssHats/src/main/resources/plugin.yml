@@ -1,0 +1,52 @@
+name: EssHats
+version: 1.0.0
+main: com.playpandora.esshats.EssHats
+api-version: 1.21
+authors: [PlayPandora]
+description: GUI-based hat plugin for EssentialsX with tier-based permission system
+website: https://github.com/PlayPandora/EssHats
+
+commands:
+  hat:
+    description: Open hat GUI or use Essentials hat command
+    usage: /<command> [item|gui]
+    aliases: [hats]
+  esshats:
+    description: EssHats plugin commands
+    usage: /<command> [reload]
+    aliases: [esshatsreload]
+
+softdepend: [Essentials, EssentialsX]
+
+permissions:
+  esshats.use:
+    description: Allows use of the hat GUI
+    default: true
+  esshats.tier.s:
+    description: Access to S-Tier hats (Pure Flex / Rare)
+    default: false
+  esshats.tier.a:
+    description: Access to A-Tier hats (Rare / Thematic)
+    default: false
+  esshats.tier.b:
+    description: Access to B-Tier hats (Recognizable & Fun)
+    default: false
+  esshats.tier.c:
+    description: Access to C-Tier hats (Funny / Meme Hats)
+    default: false
+  esshats.tier.d:
+    description: Access to D-Tier hats (Pure Chaos / Troll)
+    default: false
+  esshats.all:
+    description: Access to all hats (includes all tier permissions)
+    default: false
+    children:
+      esshats.tier.s: true
+      esshats.tier.a: true
+      esshats.tier.b: true
+      esshats.tier.c: true
+      esshats.tier.d: true
+  esshats.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+

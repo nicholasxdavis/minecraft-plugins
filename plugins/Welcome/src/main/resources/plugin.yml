@@ -1,0 +1,16 @@
+name: Welcome
+version: 1.0.0
+main: com.playpandora.welcome.Welcome
+api-version: 1.21
+author: PlayPandora
+description: Welcome plugin with tips and guide booklet for PlayPandora
+
+commands:
+  tips:
+    description: Toggle tips on/off
+    usage: /<command> [toggle]
+    aliases: [tip]
+
+softdepend: [Hook]
+
+

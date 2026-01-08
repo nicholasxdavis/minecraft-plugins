@@ -1,0 +1,57 @@
+# PandoraItems Configuration
+
+# Visual Settings
+visuals:
+  prefix: "&e&lPandora &8» &r"
+  header: "&e&l"
+  highlight: "&6"
+  text: "&7"
+  error: "&c"
+
+# Particle and Sound Settings
+effects:
+  on-claim:
+    particles:
+      enabled: true
+      type: TOTEM
+      count: 30
+      offset-x: 0.5
+      offset-y: 1.0
+      offset-z: 0.5
+    sound:
+      enabled: true
+      type: ENTITY_PLAYER_LEVELUP
+      volume: 1.0
+      pitch: 1.2
+
+# Item Settings
+items:
+  # Cannon items will be loaded from CannonShop plugin
+  # Farm items will be loaded from FarmShop plugin
+  # Kit items - integrates with EssentialsX
+  kits:
+    # Supported kit names (must match EssentialsX kit names)
+    - default
+    - onetime
+    - build
+    - keys
+    - cannon
+    - obsidian
+    - pandora
+  # Perk items will be loaded from PerkShop plugin
+  # Pet items will be loaded from PetPlugin
+
+# Messages
+messages:
+  item-given: "{prefix} &7Gave &6{item} &7to &6{player}&7!"
+  item-received: "{prefix} &7You received &6{item}&7!"
+  invalid-type: "{prefix} &cInvalid item type! Use: &6cannon&7, &6farm&7, &6kit&7, &6perk&7, or &6pet&7"
+  invalid-item: "{prefix} &cInvalid item key: &6{key}&7"
+  player-not-found: "{prefix} &cPlayer &6{player} &cnot found!"
+  level-required: "{prefix} &cYou need to be level &6{level} &cto use this item! You are level &6{current}&7"
+  no-permission: "{prefix} &cYou don't have permission to use this item!"
+  item-used: "{prefix} &7You used &6{item}&7!"
+
+
+
+

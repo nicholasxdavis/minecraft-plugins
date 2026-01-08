@@ -1,0 +1,17 @@
+name: TreasureHunt
+version: '${project.version}'
+main: com.playpandora.treasurehunt.TreasureHunt
+api-version: '1.21'
+author: PlayPandora
+description: Treasure hunting system with hints, rewards, and level integration
+
+commands:
+  treasure:
+    description: Treasure hunt commands
+    usage: /treasure [hint|claim|info]
+    aliases: [th, treasurehunt]
+
+
+
+
+

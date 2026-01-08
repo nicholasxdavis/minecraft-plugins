@@ -1,0 +1,16 @@
+name: FarmShop
+version: 1.0.0
+main: com.playpandora.farmshop.FarmShop
+api-version: 1.21
+author: PlayPandora
+description: GUI shop for buying automated farms
+
+commands:
+  farmshop:
+    description: Open the farm shop GUI
+    usage: /<command>
+    aliases: [fshop, farms]
+
+softdepend: [Vault, LevelPlugin, BuildPaste]
+
+

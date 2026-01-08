@@ -1,0 +1,30 @@
+# ChatManager Configuration
+
+# Chat format - supports PlaceholderAPI placeholders
+# Available Essentials placeholders: {DISPLAYNAME}, {MESSAGE}, {USERNAME}, {NICKNAME}, {PREFIX}, {SUFFIX}, {GROUP}, {WORLDNAME}
+# Available PlaceholderAPI placeholders: %level_level%, %vault_prefix%, etc.
+format: '&7[&6%level_level%&7] &7{DISPLAYNAME} &7: &7{MESSAGE}'
+
+# Process PlaceholderAPI placeholders
+use-placeholderapi: true
+
+# Process Essentials placeholders
+use-essentials-placeholders: true
+
+# Priority for chat processing (HIGHEST, HIGH, NORMAL, LOW, LOWEST)
+# Use HIGHEST to process before other plugins, or LOWEST to process after Essentials
+event-priority: HIGHEST
+
+# Enable debug mode
+debug: false
+
+# Anti-Spam Configuration
+anti-spam:
+  # Delay between messages in milliseconds (1000 = 1 second)
+  delay-ms: 1000
+  # Maximum number of repeated messages allowed
+  max-repeated: 3
+  # Time in milliseconds before spam count resets (5000 = 5 seconds)
+  reset-time-ms: 5000
+
+

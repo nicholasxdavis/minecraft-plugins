@@ -1,0 +1,7 @@
+name: MoreMobs
+version: 1.0.0
+main: com.playpandora.moremobs.MoreMobs
+api-version: 1.21
+author: PlayPandora
+description: Vanilla-friendly mob expansion - smarter spawns, better drops, enhanced behaviors
+

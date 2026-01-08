@@ -1,0 +1,124 @@
+package com.pandora.spawners.hook;
+
+import java.util.List;
+import java.util.UUID;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
+
+import com.google.common.eventbus.Subscribe;
+import com.plotsquared.core.PlotAPI;
+import com.plotsquared.core.PlotSquared;
+import com.plotsquared.core.events.PlotDeleteEvent;
+import com.plotsquared.core.plot.Plot;
+import com.plotsquared.core.util.query.PlotQuery;
+
+import com.pandora.spawners.api.spawner.IGenerator;
+import com.pandora.spawners.configuration.Settings;
+import com.pandora.spawners.spawner.generator.GeneratorRegistry;
+import com.pandora.spawners.utility.reflect.Reflect.RF;
+import com.pandora.spawners.utility.reflect.type.Invoker;
+
+public class HookPlotSquared implements HookInstance {
+	
+	private PlotAPI api;
+	
+	private final Class<?> _block_vector = RF.get("com.sk89q.worldedit.math.BlockVector3");
+	private final Invoker<?> _block_builder = RF.order(_block_vector, "at", double.class, double.class, double.class);
+
+	@Override
+	public boolean exists() {
+		return api != null;
+	}
+
+	@Override
+	public String message() {
+		return "PlotSquared has been found, plot support provided!";
+	}
+
+	@Override
+	public void load() {
+		if(Bukkit.getPluginManager().getPlugin("PlotSquared") == null) return;
+		api = new PlotAPI();
+		api.registerListener(this);
+	}
+	
+	public void filter(IGenerator generator, List<Location> locations) {
+		if(check(generator.world()) == true) return;
+		
+		UUID owner = generator.cache().owner();
+		if(owner == null) return;
+		
+		List<Plot> plots = PlotQuery.newQuery()
+				.inWorld(generator.world().getName())
+				.withMember(owner)
+				.asList();
+		
+		for(int i = locations.size() - 1; i >= 0; i--) {
+			Location l = locations.get(i);
+			if(plots.stream().anyMatch(plot -> in(plot, l))) continue;
+			locations.remove(i);
+		}
+	}
+	
+	public boolean modifiable(IGenerator generator, Player player) {
+		if(check(generator.world()) == true) return true;
+		
+		UUID owner = generator.cache().owner();
+		if(owner == null || owner.equals(player.getUniqueId()) == true) return true;
+		Block block = generator.block();
+		Plot plot = Plot.getPlot(com.plotsquared.core.location.Location.at(
+				block.getWorld().getName(),
+				block.getX(), block.getY(), block.getZ()));
+		return plot == null ? true : plot.isAdded(player.getUniqueId());
+	}
+
+	@Subscribe
+	public void onPlotDelete(PlotDeleteEvent event) {
+		Plot plot = event.getPlot();
+		World world = Bukkit.getWorld(event.getWorld());
+		GeneratorRegistry.remove(world, true, g -> in(plot, g.block()));
+	}
+	
+	public boolean isPlotWorld(World world) {
+		return PlotSquared.platform().plotAreaManager().hasPlotArea(world.getName());
+	}
+	
+	public boolean inside(Block block, Entity entity) {
+		if(check(block.getWorld()) == true) return true;
+		
+		Plot plot = Plot.getPlot(com.plotsquared.core.location.Location.at(
+				block.getWorld().getName(),
+				block.getX(), block.getY(), block.getZ()));
+		if(plot == null) return true;
+		Location at = entity.getLocation();
+		return plot.getRegions().stream().anyMatch(region -> {
+			Object vector = _block_builder.invoke(at.getX(), at.getY(), at.getZ());
+			return RF.order(region, "contains", _block_vector).as(boolean.class).invoke(false, vector);
+		});
+	}
+	
+	private boolean check(World world) {
+		return Settings.settings.hooks_plot_squared_use_plot_filter == false
+				|| isPlotWorld(world) == false;
+	}
+	
+	private boolean in(Plot plot, Block block) {
+		return plot.getRegions().stream().anyMatch(region -> {
+			Object vector = _block_builder.invoke((double) block.getX(), (double) block.getY(), (double) block.getZ());
+			return RF.order(region, "contains", _block_vector).as(boolean.class).invoke(false, vector);
+		});
+	}
+	
+	private boolean in(Plot plot, Location l) {
+		return plot.getRegions().stream().anyMatch(region -> {
+			Object vector = _block_builder.invoke(l.getX(), l.getY(), l.getZ());
+			return RF.order(region, "contains", _block_vector).as(boolean.class).invoke(false, vector);
+		});
+	}
+
+}

@@ -1,0 +1,16 @@
+name: PetPlugin
+version: 1.0.0
+main: com.playpandora.petplugin.PetPlugin
+api-version: 1.21
+author: PlayPandora
+description: A comprehensive pet plugin with GUI shop and enhanced pet mechanics
+
+commands:
+  pet:
+    description: Open the pet shop or manage your pets
+    usage: /<command> [rename|spawn|despawn|list] [args...]
+    aliases: [pets]
+
+softdepend: [Vault]
+
+

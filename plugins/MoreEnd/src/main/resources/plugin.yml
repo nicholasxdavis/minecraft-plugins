@@ -1,0 +1,7 @@
+name: MoreEnd
+version: 1.0.0
+main: com.playpandora.moreend.MoreEnd
+api-version: 1.21
+author: PlayPandora
+description: End overhaul plugin - existential dread, enhanced mobs, profitable events
+

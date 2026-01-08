@@ -1,0 +1,108 @@
+# DISABLED SPAWNERS CONFIGURATION
+# Add this list to your PandoraSpawners config.yml file under "Spawners.disabled-spawners"
+# This disables all spawners EXCEPT the ones in the allowed list
+
+# ALLOWED SPAWNERS (DO NOT ADD THESE TO DISABLED LIST):
+# - WITHER_SKELETON
+# - SHULKER
+# - GUARDIAN
+# - ENDERMAN
+# - BLAZE
+# - EVOKER
+# - VILLAGER
+# - SKELETON
+# - ZOMBIE_VILLAGER
+# - WITCH
+# - PIGLIN
+# - ZOMBIFIED_PIGLIN
+# - VINDICATOR
+# - RAVAGER
+# - IRON_GOLEM
+# - BEE
+# - SLIME
+# - COW
+# - SHEEP
+# - SQUID
+# - TURTLE
+# - MUSHROOM_COW
+# - WARDEN
+# - WITHER
+
+# Add this to config.yml:
+Spawners:
+  disabled-spawners:
+    - ALLAY
+    - ARMADILLO
+    - ARMOR_STAND
+    - AXOLOTL
+    - BAT
+    - BOAT
+    - BOGGED
+    - BREEZE
+    - CAMEL
+    - CAT
+    - CAVE_SPIDER
+    - CHEST_BOAT
+    - CHICKEN
+    - COD
+    - COPPER_GOLEM
+    - CREEPER
+    - CREAKING
+    - DOLPHIN
+    - DONKEY
+    - DROWNED
+    - ELDER_GUARDIAN
+    - ENDERMITE
+    - ENDER_DRAGON
+    - EXPERIENCE_BOTTLE
+    - EXPERIENCE_ORB
+    - FOX
+    - FROG
+    - GHAST
+    - GIANT
+    - GLOW_SQUID
+    - GOAT
+    - HOGLIN
+    - HORSE
+    - HUSK
+    - ILLUSIONER
+    - LLAMA
+    - MAGMA_CUBE
+    - MINECART
+    - MINECART_CHEST
+    - MINECART_COMMAND
+    - MINECART_FURNACE
+    - MINECART_HOPPER
+    - MINECART_SPAWNER
+    - MINECART_TNT
+    - MULE
+    - OCELOT
+    - PANDA
+    - PARROT
+    - PHANTOM
+    - PIG
+    - PIGLIN_BRUTE
+    - PIG_ZOMBIE
+    - PILLAGER
+    - POLAR_BEAR
+    - PUFFERFISH
+    - RABBIT
+    - SALMON
+    - SILVERFISH
+    - SKELETON_HORSE
+    - SNIFFER
+    - SNOWMAN
+    - SPIDER
+    - STRAY
+    - STRIDER
+    - TADPOLE
+    - TRADER_LLAMA
+    - TROPICAL_FISH
+    - VEX
+    - WANDERING_TRADER
+    - WOLF
+    - ZOGLIN
+    - ZOMBIE
+    - ZOMBIE_HORSE
+
+

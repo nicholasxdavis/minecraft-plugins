@@ -1,0 +1,25 @@
+name: PandoraMiner
+version: ${project.version}
+main: com.playpandora.pandoraminer.PandoraMiner
+api-version: 1.21
+author: Pandora
+description: Miner kit system - HCF inspired miner kits with secure inventory saving
+
+softdepend: [Hook, Minepacks, PandoraBases]
+
+commands:
+  miner:
+    description: Toggle miner state
+    usage: /<command>
+    aliases: [mine, mining]
+    permission: pandoraminer.use
+    permission-message: "&e&lPandora &8» &cYou don't have permission to use this command!"
+
+permissions:
+  pandoraminer.use:
+    description: Allows using the miner command
+    default: true
+  pandoraminer.admin:
+    description: Allows admin functions
+    default: op
+

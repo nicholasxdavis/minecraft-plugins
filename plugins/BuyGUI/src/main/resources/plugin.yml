@@ -1,0 +1,16 @@
+name: BuyGUI
+version: 1.0.0
+main: com.playpandora.buygui.BuyGUI
+api-version: 1.21
+author: PlayPandora
+description: GUI-based buying system for items, spawners, cannons, pets, and farms
+
+commands:
+  buy:
+    description: Open the buy GUI
+    usage: /<command>
+    aliases: [buygui, buyshop]
+
+softdepend: [Vault, LevelPlugin, PandoraSpawners, CannonShop, PetPlugin, FarmShop]
+loadbefore: [PerkShop]
+

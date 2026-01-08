@@ -1,0 +1,656 @@
+# PandoraCrates Configuration
+
+# Visual Settings
+visuals:
+  prefix: "&e&lPandora &8» &r"
+  header: "&e&l"
+  highlight: "&6"
+  text: "&7"
+  error: "&c"
+
+# Crate Settings
+crates:
+  default:
+    name: "&7Default Crate"
+    display-name: "&7Default Crate ❖"
+    key-name: "&7Default Key"
+    key-material: TRIPWIRE_HOOK
+    block-material: CHEST
+    hologram:
+      - "&7Default Crate ❖"
+      - "&7Right-click with a &7Default Key"
+      - "&7Preview: &e/crate preview default"
+    rewards:
+      common:
+        chance: 55
+        items:
+          - type: ITEM
+            material: IRON_SWORD
+            name: "&7Iron Sword"
+            lore:
+              - "&7Sharpness I"
+            enchantments:
+              SHARPNESS: 1
+            amount: 1
+          - type: ITEM
+            material: IRON_CHESTPLATE
+            name: "&7Iron Chestplate"
+            lore:
+              - "&7Protection I"
+            enchantments:
+              PROTECTION: 1
+            amount: 1
+          - type: ITEM
+            material: COOKED_BEEF
+            name: "&7Steak"
+            amount: 32
+          - type: MONEY
+            amount: 2500
+          - type: PANDORA_ITEM_CANNON
+            item-key: basic
+          - type: PANDORA_ITEM_FARM
+            item-key: sugar-cane
+      uncommon:
+        chance: 22
+        items:
+          - type: ITEM
+            material: DIAMOND_SWORD
+            name: "&eDiamond Sword"
+            lore:
+              - "&7Sharpness I"
+            enchantments:
+              SHARPNESS: 1
+            amount: 1
+          - type: ITEM
+            material: BOW
+            name: "&eBow"
+            lore:
+              - "&7Power I"
+            enchantments:
+              POWER: 1
+            amount: 1
+          - type: MONEY
+            amount: 5000
+          - type: PANDORA_ITEM_CANNON
+            item-key: scattershot
+          - type: PANDORA_ITEM_FARM
+            item-key: melon
+      rare:
+        chance: 10
+        items:
+          - type: ITEM
+            material: DIAMOND_CHESTPLATE
+            name: "&bDiamond Chestplate"
+            lore:
+              - "&7Protection II"
+            enchantments:
+              PROTECTION: 2
+            amount: 1
+          - type: MONEY
+            amount: 10000
+          - type: PANDORA_ITEM_CANNON
+            item-key: sniper
+          - type: PANDORA_ITEM_FARM
+            item-key: tree
+          - type: PANDORA_ITEM_PERK
+            item-key: heal
+      epic:
+        chance: 5
+        items:
+          - type: ITEM
+            material: GOLDEN_APPLE
+            name: "&5Golden Apple"
+            amount: 1
+          - type: MONEY
+            amount: 25000
+          - type: PANDORA_ITEM_CANNON
+            item-key: shotgun
+          - type: PANDORA_ITEM_FARM
+            item-key: chicken
+          - type: PANDORA_ITEM_PERK
+            item-key: feed
+          - type: PANDORA_ITEM_PET
+            item-key: horse
+      legendary:
+        chance: 1
+        items:
+          - type: MONEY
+            amount: 50000
+          - type: PANDORA_ITEM_FARM
+            item-key: honey
+          - type: PANDORA_ITEM_PERK
+            item-key: night
+          - type: PANDORA_ITEM_PERK
+            item-key: repair
+          - type: PANDORA_ITEM_PET
+            item-key: dog
+          - type: PANDORA_ITEM_PET
+            item-key: cat
+          - type: PANDORA_ITEM_PET
+            item-key: wolf
+          - type: PANDORA_ITEM_PET
+            item-key: parrot
+          - type: PANDORA_ITEM_PET
+            item-key: fox
+          - type: SPAWNER
+            item-key: CREEPER
+            amount: 1
+          - type: SPAWNER
+            item-key: SPIDER
+            amount: 1
+          - type: GODSET
+            item-key: diamond
+          - type: GODSET
+            item-key: netherite
+          - type: CREEPER_EGG
+            amount: 10
+          - type: ENCHANTED_GEAR
+            gear-type: netherite_helmet
+            enchantments:
+              PROTECTION: 4
+          - type: ENCHANTED_GEAR
+            gear-type: netherite_chestplate
+            enchantments:
+              PROTECTION: 4
+          - type: ENCHANTED_GEAR
+            gear-type: netherite_leggings
+            enchantments:
+              PROTECTION: 4
+          - type: ENCHANTED_GEAR
+            gear-type: netherite_boots
+            enchantments:
+              PROTECTION: 4
+          - type: ENCHANTED_GEAR
+            gear-type: netherite_sword
+            enchantments:
+              SHARPNESS: 5
+              FIRE_ASPECT: 2
+
+  imperator:
+    name: "&6Imperator Crate"
+    display-name: "&6Imperator Crate ❖"
+    key-name: "&6Imperator Key ✦"
+    key-material: TRIPWIRE_HOOK
+    block-material: CHEST
+    hologram:
+      - "&6Imperator Crate ❖"
+      - "&7Right-click with a &6Imperator Key"
+      - "&7Preview: &e/crate preview imperator"
+    rewards:
+      common:
+        chance: 45
+        items:
+          - type: ITEM
+            material: DIAMOND_SWORD
+            name: "&6Diamond Sword"
+            lore:
+              - "&7Sharpness II"
+            enchantments:
+              SHARPNESS: 2
+            amount: 1
+          - type: MONEY
+            amount: 5000
+          - type: PANDORA_ITEM_CANNON
+            item-key: scattershot
+          - type: PANDORA_ITEM_FARM
+            item-key: melon
+      uncommon:
+        chance: 25
+        items:
+          - type: ITEM
+            material: GOLDEN_APPLE
+            name: "&eGolden Apple"
+            amount: 1
+          - type: MONEY
+            amount: 10000
+          - type: PANDORA_ITEM_CANNON
+            item-key: sniper
+          - type: PANDORA_ITEM_FARM
+            item-key: tree
+          - type: PANDORA_ITEM_PERK
+            item-key: heal
+      rare:
+        chance: 15
+        items:
+          - type: ITEM
+            material: DIAMOND_CHESTPLATE
+            name: "&bDiamond Chestplate"
+            lore:
+              - "&7Protection II"
+            enchantments:
+              PROTECTION: 2
+            amount: 1
+          - type: MONEY
+            amount: 20000
+          - type: PANDORA_ITEM_CANNON
+            item-key: sniper
+          - type: PANDORA_ITEM_FARM
+            item-key: tree
+          - type: PANDORA_ITEM_PERK
+            item-key: heal
+      epic:
+        chance: 8
+        items:
+          - type: MONEY
+            amount: 50000
+          - type: PANDORA_ITEM_CANNON
+            item-key: shotgun
+          - type: PANDORA_ITEM_FARM
+            item-key: chicken
+          - type: PANDORA_ITEM_PERK
+            item-key: feed
+          - type: PANDORA_ITEM_PET
+            item-key: horse
+      legendary:
+        chance: 7
+        items:
+          - type: MONEY
+            amount: 100000
+          - type: PANDORA_ITEM_FARM
+            item-key: honey
+          - type: PANDORA_ITEM_PERK
+            item-key: night
+          - type: PANDORA_ITEM_PERK
+            item-key: repair
+          - type: PANDORA_ITEM_PET
+            item-key: dog
+          - type: PANDORA_ITEM_PET
+            item-key: cat
+          - type: PANDORA_ITEM_PET
+            item-key: wolf
+          - type: PANDORA_ITEM_PET
+            item-key: parrot
+          - type: PANDORA_ITEM_PET
+            item-key: fox
+
+  obsidian:
+    name: "&5Obsidian Crate"
+    display-name: "&5Obsidian Crate ❖"
+    key-name: "&5Obsidian Key ✦"
+    key-material: TRIPWIRE_HOOK
+    block-material: CHEST
+    hologram:
+      - "&5Obsidian Crate ❖"
+      - "&7Right-click with a &5Obsidian Key"
+      - "&7Preview: &e/crate preview obsidian"
+    rewards:
+      common:
+        chance: 50
+        items:
+          - type: ITEM
+            material: DIAMOND_SWORD
+            name: "&5Diamond Sword"
+            lore:
+              - "&7Sharpness II"
+              - "&7Unbreaking II"
+            enchantments:
+              SHARPNESS: 2
+              DURABILITY: 2
+            amount: 1
+          - type: MONEY
+            amount: 10000
+          - type: PANDORA_ITEM_CANNON
+            item-key: sniper
+          - type: PANDORA_ITEM_FARM
+            item-key: tree
+          - type: PANDORA_ITEM_PERK
+            item-key: heal
+      uncommon:
+        chance: 25
+        items:
+          - type: ITEM
+            material: GOLDEN_APPLE
+            name: "&eGolden Apple"
+            amount: 2
+          - type: MONEY
+            amount: 25000
+          - type: PANDORA_ITEM_CANNON
+            item-key: shotgun
+          - type: PANDORA_ITEM_FARM
+            item-key: chicken
+          - type: PANDORA_ITEM_PERK
+            item-key: feed
+          - type: PANDORA_ITEM_PET
+            item-key: horse
+      rare:
+        chance: 12
+        items:
+          - type: ITEM
+            material: DIAMOND_CHESTPLATE
+            name: "&bDiamond Chestplate"
+            lore:
+              - "&7Protection III"
+            enchantments:
+              PROTECTION: 3
+            amount: 1
+          - type: MONEY
+            amount: 50000
+          - type: PANDORA_ITEM_CANNON
+            item-key: basic
+          - type: PANDORA_ITEM_FARM
+            item-key: sugar-cane
+      epic:
+        chance: 6
+        items:
+          - type: MONEY
+            amount: 100000
+          - type: PANDORA_ITEM_CANNON
+            item-key: shotgun
+          - type: PANDORA_ITEM_FARM
+            item-key: chicken
+          - type: PANDORA_ITEM_PERK
+            item-key: feed
+          - type: PANDORA_ITEM_PET
+            item-key: horse
+      legendary:
+        chance: 2
+        items:
+          - type: MONEY
+            amount: 250000
+          - type: PANDORA_ITEM_FARM
+            item-key: honey
+          - type: PANDORA_ITEM_PERK
+            item-key: night
+          - type: PANDORA_ITEM_PERK
+            item-key: repair
+          - type: PANDORA_ITEM_PET
+            item-key: dog
+          - type: PANDORA_ITEM_PET
+            item-key: cat
+          - type: PANDORA_ITEM_PET
+            item-key: wolf
+          - type: PANDORA_ITEM_PET
+            item-key: parrot
+          - type: PANDORA_ITEM_PET
+            item-key: fox
+
+  pandora:
+    name: "&ePandora Crate"
+    display-name: "&ePandora Crate ❖"
+    key-name: "&ePandora Key ✦"
+    key-material: TRIPWIRE_HOOK
+    block-material: CHEST
+    hologram:
+      - "&ePandora Crate ❖"
+      - "&7Right-click with a &ePandora Key"
+      - "&7Preview: &e/crate preview pandora"
+    rewards:
+      common:
+        chance: 35
+        items:
+          - type: ITEM
+            material: DIAMOND_CHESTPLATE
+            name: "&eDiamond Chestplate"
+            lore:
+              - "&7Protection III"
+            enchantments:
+              PROTECTION: 3
+            amount: 1
+          - type: MONEY
+            amount: 25000
+          - type: PANDORA_ITEM_CANNON
+            item-key: shotgun
+          - type: PANDORA_ITEM_FARM
+            item-key: chicken
+          - type: PANDORA_ITEM_PERK
+            item-key: feed
+          - type: PANDORA_ITEM_PET
+            item-key: horse
+      uncommon:
+        chance: 25
+        items:
+          - type: ITEM
+            material: GOLDEN_APPLE
+            name: "&eGolden Apple"
+            amount: 3
+          - type: MONEY
+            amount: 50000
+          - type: PANDORA_ITEM_CANNON
+            item-key: basic
+          - type: PANDORA_ITEM_FARM
+            item-key: sugar-cane
+      rare:
+        chance: 18
+        items:
+          - type: MONEY
+            amount: 100000
+          - type: PANDORA_ITEM_CANNON
+            item-key: sniper
+          - type: PANDORA_ITEM_FARM
+            item-key: tree
+          - type: PANDORA_ITEM_PERK
+            item-key: heal
+      epic:
+        chance: 12
+        items:
+          - type: MONEY
+            amount: 250000
+          - type: PANDORA_ITEM_CANNON
+            item-key: shotgun
+          - type: PANDORA_ITEM_FARM
+            item-key: chicken
+          - type: PANDORA_ITEM_PERK
+            item-key: feed
+          - type: PANDORA_ITEM_PET
+            item-key: horse
+      legendary:
+        chance: 10
+        items:
+          - type: MONEY
+            amount: 500000
+          - type: PANDORA_ITEM_FARM
+            item-key: honey
+          - type: PANDORA_ITEM_PERK
+            item-key: night
+          - type: PANDORA_ITEM_PERK
+            item-key: repair
+          - type: PANDORA_ITEM_PET
+            item-key: dog
+          - type: PANDORA_ITEM_PET
+            item-key: cat
+          - type: PANDORA_ITEM_PET
+            item-key: wolf
+          - type: PANDORA_ITEM_PET
+            item-key: parrot
+          - type: PANDORA_ITEM_PET
+            item-key: fox
+
+  monthly:
+    name: "&dMonthly Crate"
+    display-name: "&dMonthly Crate ❖"
+    key-name: "&dMonthly Key ✦"
+    key-material: TRIPWIRE_HOOK
+    block-material: CHEST
+    hologram:
+      - "&dMonthly Crate ❖"
+      - "&7Right-click with a &dMonthly Key"
+      - "&7Preview: &e/crate preview monthly"
+    rewards:
+      common:
+        chance: 50
+        items:
+          - type: ITEM
+            material: DIAMOND_BLOCK
+            name: "&dDiamond Block"
+            amount: 16
+          - type: MONEY
+            amount: 50000
+          - type: PANDORA_ITEM_CANNON
+            item-key: basic
+          - type: PANDORA_ITEM_FARM
+            item-key: sugar-cane
+      uncommon:
+        chance: 25
+        items:
+          - type: MONEY
+            amount: 100000
+          - type: PANDORA_ITEM_CANNON
+            item-key: scattershot
+          - type: PANDORA_ITEM_FARM
+            item-key: melon
+      rare:
+        chance: 13
+        items:
+          - type: MONEY
+            amount: 250000
+          - type: PANDORA_ITEM_CANNON
+            item-key: sniper
+          - type: PANDORA_ITEM_FARM
+            item-key: tree
+          - type: PANDORA_ITEM_PERK
+            item-key: heal
+      epic:
+        chance: 7
+        items:
+          - type: MONEY
+            amount: 500000
+          - type: PANDORA_ITEM_CANNON
+            item-key: shotgun
+          - type: PANDORA_ITEM_FARM
+            item-key: chicken
+          - type: PANDORA_ITEM_PERK
+            item-key: feed
+          - type: PANDORA_ITEM_PET
+            item-key: horse
+      legendary:
+        chance: 5
+        items:
+          - type: MONEY
+            amount: 1000000
+          - type: PANDORA_ITEM_FARM
+            item-key: honey
+          - type: PANDORA_ITEM_PERK
+            item-key: night
+          - type: PANDORA_ITEM_PERK
+            item-key: repair
+          - type: PANDORA_ITEM_PET
+            item-key: dog
+          - type: PANDORA_ITEM_PET
+            item-key: cat
+          - type: PANDORA_ITEM_PET
+            item-key: wolf
+          - type: PANDORA_ITEM_PET
+            item-key: parrot
+          - type: PANDORA_ITEM_PET
+            item-key: fox
+
+# Animation Settings
+animation:
+  roll-duration-ticks: 60
+  slow-down-ticks: 20
+  particle-interval: 2
+  sound-interval: 5
+
+# Effects
+effects:
+  on-open:
+    particles:
+      enabled: true
+      type: PORTAL
+      count: 30
+    sound:
+      enabled: true
+      type: "entity.player.levelup"
+      volume: 1.0
+      pitch: 1.2
+  during-roll:
+    particles:
+      enabled: true
+      type: CRIT
+      count: 5
+    sound:
+      enabled: true
+      type: "ui.button.click"
+      volume: 0.5
+      pitch: 1.0
+  on-reward:
+    fireworks:
+      enabled: true
+    particles:
+      enabled: true
+      type: TOTEM
+      count: 50
+    sound:
+      enabled: true
+      type: "entity.firework_rocket.blast"
+      volume: 1.0
+      pitch: 1.0
+
+# Firework Colors by Rarity
+fireworks:
+  common:
+    color: WHITE
+  uncommon:
+    color: GREEN
+  rare:
+    color: BLUE
+  epic:
+    color: PURPLE
+  legendary:
+    color: YELLOW
+
+# Broadcast Settings
+broadcast:
+  enabled: true
+  rarities:
+    - rare
+    - epic
+    - legendary
+  message: "{prefix} &6{player} &7opened a &6{crate} &7and won &6{reward}&7!"
+
+# Pity System
+pity:
+  enabled: true
+  threshold: 50
+  guaranteed-rarity: rare
+
+# Cooldown Settings
+cooldown:
+  enabled: true
+  seconds: 3
+
+# Auto-Save Settings (saves all player data, statistics, locations, and cooldowns)
+auto-save:
+  enabled: true
+  interval-ticks: 6000  # Auto-save every 6000 ticks (5 minutes) - 20 ticks = 1 second
+
+# Sound Settings
+sounds:
+  enter:
+    enabled: true
+    sound: "entity.player.levelup"
+    volume: 0.7
+    pitch: 1.2
+  spin:
+    enabled: true
+    sound: "block.note_block.xylophone"
+    volume: 0.7
+    pitch: 1.0
+  win:
+    enabled: true
+    sound: "entity.player.levelup"
+    volume: 1.0
+    pitch: 1.2
+  preview:
+    enabled: true
+    sound: "ui.button.click"
+    volume: 0.5
+    pitch: 1.0
+  error:
+    enabled: true
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 1.0
+
+# Messages
+messages:
+  no-key: "{prefix} &cYou don't have a key for this crate!"
+  crate-opened: "{prefix} &7You opened a &6{crate} &7crate!"
+  reward-received: "{prefix} &7You received: &6{reward}&7!"
+  key-given: "{prefix} &7Gave &6{amount} &6{key} &7to &6{player}&7!"
+  key-received: "{prefix} &7You received &6{amount} &6{key}&7!"
+  invalid-crate: "{prefix} &cInvalid crate: &6{crate}&7"
+  invalid-player: "{prefix} &cPlayer not found: &6{player}&7"
+  no-permission: "{prefix} &cYou don't have permission to use this command!"
+  crate-preview: "{prefix} &7Previewing &6{crate} &7rewards..."
+

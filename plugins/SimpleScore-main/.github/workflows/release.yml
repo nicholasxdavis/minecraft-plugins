@@ -1,0 +1,62 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ 21 ]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java ${{ matrix.java }}
+        uses: actions/setup-java@v5
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: temurin
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build with Gradle Wrapper
+        run: ./gradlew shadowJar
+
+      - name: Generate Changelog
+        id: generate_changelog
+        run: |
+          git fetch --unshallow --tags
+          tag=$(git tag --sort version:refname | tail -n 2 | head -n 1)
+          changelog=$(git log $tag...HEAD --pretty=format:'- %h %s' --reverse)
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "CHANGELOG<<$EOF" >> $GITHUB_OUTPUT
+          echo "$changelog" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          body: |
+            ${{ steps.generate_changelog.outputs.CHANGELOG }}
+          files: build/libs/*.jar
+        continue-on-error: false
+
+      - name: Publish Hangar Release
+        env:
+          HANGAR_TOKEN: ${{ secrets.HANGAR_TOKEN }}
+        run: ./gradlew publishPluginPublicationToHangar
+        continue-on-error: true
+
+      - name: Publish Modrinth Release
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: ./gradlew modrinth
+        continue-on-error: true

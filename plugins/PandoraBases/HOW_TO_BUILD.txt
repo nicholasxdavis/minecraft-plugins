@@ -1,0 +1,107 @@
+================================================================================
+                    PANDORABASES - HOW TO BUILD THE PLUGIN
+================================================================================
+
+You need to build the plugin to create a JAR file that can be placed in your
+server's plugins folder.
+
+================================================================================
+OPTION 1: USING MAVEN (RECOMMENDED)
+================================================================================
+
+1. INSTALL MAVEN:
+   - Download from: https://maven.apache.org/download.cgi
+   - Extract to a folder (e.g., C:\Program Files\Apache\maven)
+   - Add the 'bin' folder to your Windows PATH environment variable
+   - Restart your terminal/command prompt
+
+2. BUILD THE PLUGIN:
+   Open Command Prompt or PowerShell in this folder and run:
+   
+   mvn clean package -DskipTests
+
+3. FIND YOUR JAR:
+   After building, the JAR file will be at:
+   target\PandoraBases-1.6.9.5-4.1.9.jar
+
+4. COPY TO SERVER:
+   Copy the JAR file to your server's plugins folder
+
+================================================================================
+OPTION 2: USING BUILD SCRIPTS
+================================================================================
+
+WINDOWS:
+- Double-click: build.bat
+- OR right-click build.ps1 → Run with PowerShell
+
+The script will automatically:
+- Check if Maven is installed
+- Build the plugin
+- Show you where the JAR file is located
+
+================================================================================
+OPTION 3: USING AN IDE (EASIEST)
+================================================================================
+
+INTELLIJ IDEA:
+1. Open IntelliJ IDEA
+2. File → Open → Select this folder
+3. Wait for Maven to sync (bottom right corner)
+4. Open Maven tool window (View → Tool Windows → Maven)
+5. Expand: PandoraBases → Lifecycle
+6. Double-click: clean
+7. Double-click: package
+8. Find JAR at: target/PandoraBases-1.6.9.5-4.1.9.jar
+
+ECLIPSE:
+1. File → Import → Maven → Existing Maven Projects
+2. Select this folder
+3. Right-click project → Run As → Maven build...
+4. Goals: clean package
+5. Click Run
+6. Find JAR at: target/PandoraBases-1.6.9.5-4.1.9.jar
+
+================================================================================
+REQUIREMENTS
+================================================================================
+
+- Java 8 or higher (You have Java 25 - Good!)
+- Maven 3.6 or higher
+- Internet connection (to download dependencies)
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+"mvn is not recognized":
+→ Install Maven and add it to your PATH
+→ OR use an IDE (IntelliJ/Eclipse) which has Maven built-in
+
+"Build failed":
+→ Make sure Java 8+ is installed
+→ Check that all source files are present
+→ Try: mvn clean (then mvn package)
+
+"JAR not found":
+→ Check the target folder
+→ Make sure build completed successfully
+→ Look for error messages
+
+================================================================================
+AFTER BUILDING
+================================================================================
+
+1. Copy target\PandoraBases-1.6.9.5-4.1.9.jar to your server's plugins folder
+2. Restart your server
+3. The plugin will generate config files on first run
+4. Configure in: plugins/PandoraBases/config.yml
+
+================================================================================
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+name: PandoraItems
+version: ${project.version}
+main: com.playpandora.pandoraitems.PandoraItems
+api-version: 1.21
+author: Pandora
+description: Item management plugin for cannons, farms, kits, perks, and pets
+softdepend: [Essentials, EssentialsX]
+
+commands:
+  pandoraitem:
+    description: Give items to players
+    usage: /<command> give <type> <item> [player]
+    aliases: [pi, pitem]
+    permission: pandoraitems.give
+    permission-message: "&e&lPandora &8» &cYou don't have permission to use this command!"
+
+permissions:
+  pandoraitems.give:
+    description: Allows giving items to players
+    default: op
+  pandoraitems.use:
+    description: Allows using items
+    default: true
+

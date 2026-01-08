@@ -1,0 +1,42 @@
+# HomeBuffs Configuration
+
+# Buff Settings
+buffs:
+  # Distance in blocks from home to receive buffs
+  distance: 50
+  
+  # Buff effects
+  health-boost:
+    enabled: true
+    level: 1  # 3 extra hearts (2 hearts per level)
+  
+  jump-boost:
+    enabled: true
+    level: 1  # Jump boost level
+  
+  speed:
+    enabled: true
+    level: 1  # Speed boost level
+  
+  haste:
+    enabled: true
+    level: 1  # Mining speed boost level
+  
+  regeneration:
+    enabled: true
+    level: 1  # Health regeneration level
+  
+  # Check interval in ticks (20 ticks = 1 second)
+  check-interval: 20
+
+# Messages
+messages:
+  prefix: "&e&lPandora"
+  buffs-enabled: "{prefix} &eHome buffs enabled! You'll receive buffs when near your home."
+  buffs-disabled: "{prefix} &7Home buffs disabled."
+  no-homes: "{prefix} &7You don't have any homes set. Use &6/sethome &7to create one."
+  status-near-home: "{prefix} &eYou are near your home! Buffs are active."
+  status-far-from-home: "{prefix} &7You are not near any of your homes."
+  essentials-not-found: "{prefix} &7Essentials plugin not found!"
+
+

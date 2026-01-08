@@ -1,0 +1,24 @@
+name: LevelPlugin
+version: 1.0.0
+main: com.playpandora.levelplugin.LevelPlugin
+api-version: 1.21
+author: PlayPandora
+description: A comprehensive level system with XP tracking and rewards
+
+commands:
+  level:
+    description: View your level or other player's level
+    usage: /<command> [player]
+    aliases: [lvl, levels]
+  xp:
+    description: View your XP or give XP to players
+    usage: /<command> [give|set] [player] [amount]
+    aliases: [exp, experience]
+  levelset:
+    description: Set a player's level (Admin only)
+    usage: /<command> <player> <0-100>
+    aliases: [setlevel, lvlset]
+
+softdepend: [PlaceholderAPI, LevelledMobs]
+
+

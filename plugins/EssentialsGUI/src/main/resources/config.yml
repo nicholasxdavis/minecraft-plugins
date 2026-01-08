@@ -1,0 +1,26 @@
+# EssentialsGUI Configuration
+
+# GUI Settings
+gui:
+  warp:
+    title: "&8Warps"
+    size: 54
+    item-per-page: 45
+  home:
+    title: "&8Homes"
+    size: 54
+    item-per-page: 45
+
+# Messages
+messages:
+  prefix: "&ePandora"
+  no-permission: "{prefix} &7You don't have permission to use this command."
+  no-warps: "{prefix} &7No warps available."
+  no-homes: "{prefix} &7You don't have any homes set. Use &6/sethome &7to create one."
+  warp-teleporting: "{prefix} &7Teleporting to &6{warp}&7..."
+  home-teleporting: "{prefix} &7Teleporting to &6{home}&7..."
+  warp-not-found: "{prefix} &7Warp &6{warp} &7not found."
+  home-not-found: "{prefix} &7Home &6{home} &7not found."
+  essentials-not-found: "{prefix} &7Essentials plugin not found!"
+
+

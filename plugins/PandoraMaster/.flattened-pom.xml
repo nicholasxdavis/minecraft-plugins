@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>at.pcgamingfreaks</groupId>
+  <artifactId>Minepacks-Parent</artifactId>
+  <version>2.5.4</version>
+  <packaging>pom</packaging>
+  <description>Minepacks is a backpack plugin with different backpack sizes, multi-language support and SQLite and MySQL storage support.</description>
+  <inceptionYear>2014</inceptionYear>
+  <licenses>
+    <license>
+      <name>GNU General Public License (GPL) v3</name>
+      <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git@github.com:GeorgH93/Minepacks.git</connection>
+    <developerConnection>scm:git:git@github.com:GeorgH93/Minepacks.git</developerConnection>
+    <url>git@github.com:GeorgH93/Minepacks.git</url>
+  </scm>
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/GeorgH93/Minepacks/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>jenkins</system>
+    <url>https://ci.pcgamingfreaks.at/job/Minepacks/</url>
+  </ciManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>23.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>bukkit</artifactId>
+      <version>1.15.2-R0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.42</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>pcgf-repo</id>
+      <url>https://repo.pcgamingfreaks.at/repository/maven-everything/</url>
+    </repository>
+    <repository>
+      <id>spigot-nexus</id>
+      <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+    </repository>
+  </repositories>
+</project>

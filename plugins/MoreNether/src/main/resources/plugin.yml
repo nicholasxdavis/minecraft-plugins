@@ -1,0 +1,7 @@
+name: MoreNether
+version: 1.0.0
+main: com.playpandora.morenether.MoreNether
+api-version: 1.21
+author: PlayPandora
+description: Nether overhaul plugin - horror atmosphere, enhanced mobs, profitable events
+

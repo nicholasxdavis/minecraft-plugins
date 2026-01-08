@@ -1,0 +1,22 @@
+# Pandora WorldLock Configuration
+
+# Nether unlock date (Friday 5pm Feb 20th)
+nether-unlock-year: 2025
+nether-unlock-month: 2
+nether-unlock-day: 20
+nether-unlock-hour: 17
+nether-unlock-minute: 0
+
+# End unlock date (Friday 5pm April 17th)
+end-unlock-year: 2025
+end-unlock-month: 4
+end-unlock-day: 17
+end-unlock-hour: 17
+end-unlock-minute: 0
+
+# World sizes (7k = 7000)
+world-size: 7000
+
+
+
+

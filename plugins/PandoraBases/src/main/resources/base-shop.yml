@@ -1,0 +1,132 @@
+# Base Shop Configuration
+# Items that increase base value and can be purchased in the beacon GUI
+
+base-shop:
+  # Shop title (with color codes)
+  title: "&8Base Shop"
+  
+  # Items available in the shop
+  items:
+    # Ender Elytra - worth 5m
+    ender_elytra:
+      material: "ELYTRA"
+      display-name: "&5&lEnder Elytra"
+      lore:
+        - ""
+        - "&7An enchanted Elytra with"
+        - "&7Ender properties."
+        - ""
+        - "&aBase Value: &e$5,000,000"
+        - ""
+        - "&6Price: &e$5,000,000"
+        - ""
+        - "&eClick to purchase!"
+      price: 5000000.0
+      enchantments:
+        - "MENDING:1"
+        - "UNBREAKING:3"
+      base-value: 5000000.0
+      
+    # Dragon Head - worth 1m
+    dragon_head:
+      material: "DRAGON_HEAD"
+      display-name: "&5&lDragon Head"
+      lore:
+        - ""
+        - "&7The head of an Ender Dragon."
+        - ""
+        - "&aBase Value: &e$1,000,000"
+        - ""
+        - "&6Price: &e$1,000,000"
+        - ""
+        - "&eClick to purchase!"
+      price: 1000000.0
+      base-value: 1000000.0
+      
+    # Piglin Head - worth 700k
+    piglin_head:
+      material: "PIGLIN_HEAD"
+      display-name: "&6&lPiglin Head"
+      lore:
+        - ""
+        - "&7The head of a Piglin."
+        - ""
+        - "&aBase Value: &e$700,000"
+        - ""
+        - "&6Price: &e$700,000"
+        - ""
+        - "&eClick to purchase!"
+      price: 700000.0
+      base-value: 700000.0
+      
+    # Gilded Blackstone - worth 200k
+    gilded_blackstone:
+      material: "GILDED_BLACKSTONE"
+      display-name: "&6&lGilded Blackstone"
+      lore:
+        - ""
+        - "&7Rare blackstone with gold"
+        - "&7accents."
+        - ""
+        - "&aBase Value: &e$200,000"
+        - ""
+        - "&6Price: &e$200,000"
+        - ""
+        - "&eClick to purchase!"
+      price: 200000.0
+      base-value: 200000.0
+      
+    # Deepslate Emerald Ore - worth 150k
+    deepslate_emerald_ore:
+      material: "DEEPSLATE_EMERALD_ORE"
+      display-name: "&a&lDeepslate Emerald Ore"
+      lore:
+        - ""
+        - "&7Rare emerald ore found"
+        - "&7in deepslate."
+        - ""
+        - "&aBase Value: &e$150,000"
+        - ""
+        - "&6Price: &e$150,000"
+        - ""
+        - "&eClick to purchase!"
+      price: 150000.0
+      base-value: 150000.0
+      
+    # Elytra - worth 200k
+    elytra:
+      material: "ELYTRA"
+      display-name: "&b&lElytra"
+      lore:
+        - ""
+        - "&7Allows you to glide through"
+        - "&7the air."
+        - ""
+        - "&aBase Value: &e$200,000"
+        - ""
+        - "&6Price: &e$200,000"
+        - ""
+        - "&eClick to purchase!"
+      price: 200000.0
+      base-value: 200000.0
+    
+    # Tripwire Alarm Kit - Security system
+    tripwire_alarm:
+      material: "TRIPWIRE_HOOK"
+      display-name: "&c&lTripwire Alarm Kit"
+      lore:
+        - ""
+        - "&7A security alarm system for"
+        - "&7your base. Requires 4 tripwires"
+        - "&7placed 20 blocks apart."
+        - ""
+        - "&7When activated, notifies all"
+        - "&7base members when someone"
+        - "&7enters your claim."
+        - ""
+        - "&6Price: &e$500,000"
+        - ""
+        - "&eClick to purchase!"
+      price: 500000.0
+      base-value: 0.0
+

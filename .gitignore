@@ -1,0 +1,30 @@
+# Exclude all README files (any case, any extension)
+**/README*
+**/readme*
+**/*README*
+**/*readme*
+
+# Common build artifacts (optional but recommended)
+**/target/
+**/build/
+**/.classpath
+**/.project
+**/.settings/
+**/*.class
+**/bin/
+
+# IDE files (optional)
+**/.idea/
+**/*.iml
+**/.vscode/
+**/.eclipse/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Maven/Gradle temp files (but keep the structure)
+**/maven-temp/
+**/.gradle/
+**/gradle-wrapper/
+

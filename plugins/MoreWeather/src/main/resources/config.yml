@@ -1,0 +1,111 @@
+# MoreWeather Configuration
+# Weather that actually matters!
+
+# Season System
+seasons:
+  enabled: true
+  duration-ticks: 7200000  # 10 hours (7200000 ticks = 100 hours in-game)
+  locked-season: ""  # Leave empty for automatic, or set to SPRING/SUMMER/FALL/WINTER
+  current: SPRING  # Auto-set, don't manually edit
+  start-time: 0  # Auto-set, don't manually edit
+
+# Weather Types Configuration
+weather:
+  # Override vanilla weather system
+  override-vanilla: true
+  
+  heavy-rain:
+    enabled: true
+    movement-slow: true  # Slow players without leather boots
+    reduce-visibility: true
+    crop-growth: true  # Accelerate crop growth
+    more-fish: true  # Spawn more fish
+    
+  storm:
+    enabled: true
+    lightning-radius: 100  # Radius around players for lightning strikes
+    lightning-rods-power-redstone: true
+    lightning-rod-radius: 5  # Blocks around lightning rod that get powered
+    convert-zombies: true  # Convert zombies to charged variants
+    
+  snow:
+    enabled: true
+    
+  blizzard:
+    enabled: true
+    movement-slow: true  # Slow players without leather/wool armor
+    reduce-visibility: true
+    cold-damage: false  # Deal damage if no protection
+    snow-buildup: true  # Build up snow layers dynamically
+    more-strays: true  # Spawn more strays during blizzard
+    
+  fog:
+    enabled: true
+    reduce-visibility: true  # Drastically reduce visibility
+    spawn-phantoms: true  # Spawn phantoms even for players who slept
+    
+  heatwave:
+    enabled: true
+    fatigue: true  # Players get tired faster
+    fire-resistance: true  # Fire resistance benefits
+    increased-brightness: true
+    faster-creeper-ignition: true
+    evaporate-water: true  # Evaporate water in exposed containers
+    
+  spring-bloom:
+    enabled: true
+    mining-bonus: true  # Faster mining
+    grass-growth: true  # Accelerate grass growth
+    honey-generation: true  # Accelerate honey generation
+    sheep-wool-regen: true  # Sheep regrow wool instantly when eating grass
+    flower-spread: true  # Flowers spread naturally
+
+# Temperature System
+temperature:
+  enabled: true
+  freezing-damage: false  # Deal damage when freezing
+  heat-damage: false  # Deal damage when overheating
+  
+# Biome Base Temperatures (automatically calculated)
+# Hot: Desert (40), Badlands (35), Savanna (30)
+# Cold: Ice Spikes (-10), Frozen River (-5), Snowy Taiga (-5), etc.
+# Normal: Everything else (20)
+
+# Plugin Integrations
+integrations:
+  basesystem:
+    enabled: true
+    # Weather affects base events and buffs
+    
+  homebuffs:
+    enabled: true
+    # Weather modifies home buff effectiveness
+    
+  farmshop:
+    enabled: true
+    # Weather affects crop growth rates
+    
+  levelplugin:
+    enabled: true
+    # Award XP for weather-related activities
+    xp-amounts:
+      survive-storm: 5.0  # XP for surviving a storm
+      survive-lightning: 10.0  # XP for being struck by lightning and surviving
+      harvest-spring: 2.0  # XP for harvesting during spring bloom
+      survive-heatwave: 3.0  # XP for surviving a heatwave
+      survive-blizzard: 5.0  # XP for surviving a blizzard
+
+# Messages
+messages:
+  prefix: "&eMoreWeather"
+  season-change: "{prefix} &7Season changed to &6{season}"
+  # Lightning messages removed - now using Hook notifications only
+  # lightning-strike: "&7You were struck by lightning!"  # Now via Hook
+  # lightning-surge: "&7Lightning surge in your area!"   # Now via Hook
+
+
+
+
+
+
+

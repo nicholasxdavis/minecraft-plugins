@@ -1,0 +1,20 @@
+name: SellGUI
+version: 1.0.0
+main: com.playpandora.sellgui.SellGUI
+api-version: 1.21
+author: PlayPandora
+description: GUI-based selling system for crops, ores, and farmables
+
+commands:
+  sell:
+    description: Open the sell GUI
+    usage: /<command>
+    aliases: [sellgui, sellshop]
+  sellall:
+    description: Confirm selling all items
+    usage: /<command> confirm
+    aliases: [sellallitems]
+
+softdepend: [Vault, LevelPlugin]
+
+

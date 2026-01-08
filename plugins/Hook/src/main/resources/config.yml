@@ -1,0 +1,95 @@
+# Hook Configuration
+# Central notification system for all plugins
+
+# Global Notification Settings
+notifications:
+  enabled: true
+  cooldown-ms: 500  # Minimum time between notifications (milliseconds)
+  
+  # Built-in notifications
+  welcome-on-join: true
+  respawn-notification: true
+
+# Plugin Integration Settings
+integrations:
+  levelplugin:
+    enabled: true
+    level-up-notification: true
+    
+  perkshop:
+    enabled: true
+    purchase-notification: true
+    
+  sellgui:
+    enabled: true
+    sell-notification: true
+    
+  moreweather:
+    enabled: true
+    weather-alert: true
+    season-change-notification: true
+    
+  basesystem:
+    enabled: true
+    event-notification: true
+    
+  petplugin:
+    enabled: true
+    purchase-notification: true
+    
+  farmshop:
+    enabled: true
+    purchase-notification: true
+    
+  treasurehunt:
+    enabled: true
+    treasure-notification: true
+    hint-notification: true
+    distance-announcement: true
+    
+  morenether:
+    enabled: true
+    dimension-entry-notification: true
+    rare-mob-kill-notification: true
+    
+  moreend:
+    enabled: true
+    dimension-entry-notification: true
+    rare-mob-kill-notification: true
+    
+  morecaves:
+    enabled: true
+    cave-entry-notification: true
+    cave-mob-kill-notification: true
+    
+  quest-system:
+    enabled: true
+    completion-notification: true
+    progress-notification: true
+    
+  essentialsgui:
+    enabled: true
+    teleport-notification: true
+    
+  bounty:
+    enabled: true
+    claim-notification: true
+    
+  combatlogx:
+    enabled: true
+    combat-start-notification: true
+    combat-end-notification: true
+
+# Messages
+messages:
+  treasure-distance: "&e[Treasure] &7%player% is &6%hints% hints &7away from the treasure!"
+
+# Title Timing Settings (milliseconds)
+timings:
+  fade-in: 500
+  stay: 3000
+  fade-out: 1000
+
+
+
+

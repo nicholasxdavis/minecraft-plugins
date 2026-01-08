@@ -1,0 +1,38 @@
+name: PandoraOnevsOne
+version: ${project.version}
+main: com.playpandora.pandoraonevsone.PandoraOnevsOne
+api-version: 1.21
+author: Pandora
+description: 1v1 duel system - Kohi/Badlion inspired practice PvP
+
+softdepend: [Hook, Minepacks, PandoraBases]
+
+commands:
+  onevsone:
+    description: 1v1 duel commands
+    usage: /<command> [set arena|challenge|accept|leave]
+    aliases: [1v1, duel, pvp]
+    permission: pandoraonevsone.use
+    permission-message: "&e&lPandora &8» &cYou don't have permission to use this command!"
+  ovo:
+    description: 1v1 duel commands (short)
+    usage: /<command> [set arena|challenge|accept|leave]
+    aliases: []
+    permission: pandoraonevsone.use
+    permission-message: "&e&lPandora &8» &cYou don't have permission to use this command!"
+
+permissions:
+  pandoraonevsone.use:
+    description: Allows using the 1v1 command
+    default: true
+  pandoraonevsone.admin:
+    description: Allows admin functions
+    default: op
+  pandoraonevsone.setarena:
+    description: Allows setting the 1v1 arena
+    default: op
+  pandoraonevsone.bypass:
+    description: Allows bypassing 1v1 restrictions
+    default: op
+
+

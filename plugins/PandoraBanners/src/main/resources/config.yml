@@ -1,0 +1,8 @@
+# PandoraBanners Configuration
+
+# Path to the banner markdown file
+banner-file-path: "C:\\Users\\lifa2\\Downloads\\pandora_banners.md"
+
+# Note: On Linux/Mac, use forward slashes:
+# banner-file-path: "/path/to/pandora_banners.md"
+

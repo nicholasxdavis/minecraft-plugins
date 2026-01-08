@@ -1,0 +1,31 @@
+# CraftAccess Configuration
+
+# Level requirements for each feature
+level-requirements:
+  # Level required to use /craft command
+  craft: 5
+  # Level required to use /enchant command
+  enchant: 10
+  # Level required to use /anvil command
+  anvil: 15
+
+# Messages
+messages:
+  prefix: "&e&lPandora"
+  no-permission: "{prefix} &7You don't have permission to use this command."
+  level-required: "{prefix} &7You need to be level &6{level} &7to use this command. You are level &6{current}"
+  not-unlocked: "{prefix} &7You need to place your first &6{block} &7in the world to unlock this command!"
+  opened: "{prefix} &7Opened &6{type} &7for you!"
+  error: "{prefix} &7An error occurred while opening the {type}."
+
+# Block types that unlock commands
+unlock-blocks:
+  craft: CRAFTING_TABLE
+  enchant: ENCHANTING_TABLE
+  anvil: ANVIL
+
+# Auto-save settings
+# Auto-save interval in ticks (20 ticks = 1 second, default: 6000 ticks = 5 minutes)
+auto-save-interval-ticks: 6000
+
+

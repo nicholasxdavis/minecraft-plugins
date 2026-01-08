@@ -1,0 +1,69 @@
+[0.8] The Horde update
+
+Features:
+    - Customizable hordes can now spawn near players X
+    - Can now give custom items X
+    - ZombieBoss can now blink X
+    - ZombieBoss can now sprint X
+
+Bugfixes:
+    - Mob damage is prevented by WorldGuard zones X
+    - Cleaned decompiled classes for future readability (Boss, ZombieBoss, ConfigReader) X
+    - ThunderDuringBloodMoon config now works properly X
+
+Misc:
+    - Better loot system X
+    - Commands can now be executed via the console and rcon X
+    - Added 1.16 support X
+
+To do:
+    - Make configreader more flexible
+
+[0.7] The Boss Update
+
+Features:
+- Added a zombie boss
+- Added pre and post BloodMoon commands
+- Mob spawning rate can now be increased or decreased during BloodMoons
+
+Bugfixes:
+- Fixed a bug where mobs were not dropping loot consistently
+
+Misc:
+- Endermen are now handled by the plugin
+- You can now completely suppress a line in locales file
+- Permanent BloodMoon no longer display the BloodMoon progress bar
+- More unit tests have been added to further insure plugin stability
+- Locales and config added. Please regenerate / review the new config and locales yamls
+
+-------------------------------------------------------------------------------------------------------------------
+
+[0.6] The multiverse update
+
+Features:
+- Configurations are now loaded on a per-world basis. See notes
+- Locales can now contain color codes and other text alterations (bold, italic etc)
+- BloodMoon can now be permanent
+
+Bugfixes:
+- Fixed a bug where events happening in non-bloodmoon worlds were still treated as part of a bloodmoon
+- Fixed the default config file
+- Fixed a bug where some configs where ignored
+- Fixed a bug which caused an error when disabling the plugin
+
+Misc:
+- Unit tests have been implemented to increase overall release quality
+- Commands have been reworked. See plugin home page for the new list
+- Plugin cache now stores BloodMoon status more accurately
+- You can now disable sleeping during BloodMoons
+- You can now disable special reward from spawner created mobs
+- Increased overall plugin robustness; many scenarios will give human-readable warnings instead of crashing the plugin
+
+Notes:
+- Plugin name internally changed from Bloodmoon to BloodMoon, and thus, the plugin folder's name is now changed, at least on Linux. Since
+Windows handles capital letters in filenames differently, I am unsure if you need to manually transfer your config files
+- The old BloodMoon/config.yml is deprecated, so simply copy your configs to the new config files. Please review the newly generated config
+file, as there was some slight changes in the config file structure
+- Commands and permissions have been reworked. Please ensure your permissions are setup correctly
+- New locales have been added. Be sure to add them from https://gitlab.com/SpectralMemories/bloodmoon/-/wikis/Default-Locales
+

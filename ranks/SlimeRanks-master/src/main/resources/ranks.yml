@@ -1,0 +1,91 @@
+# ============================================
+# Pandora Ranks Configuration
+# ============================================
+# Hardcoded ranks for Pandora Server
+# Uses LuckPerms permissions
+# ============================================
+
+ConfigVersion: 1
+
+Ranks:
+  # ============================================
+  # PANDORA - Top Rank (Yellow)
+  # ============================================
+  pandora:
+    Tab:
+      Active: true
+      Format: "<yellow><b>Pandora</b></yellow> <dark_gray>|</dark_gray> <gray>{player}</gray>"
+      Priority: 4
+    Chat:
+      Active: true
+      Format: "<yellow><b>Pandora</b></yellow> <dark_gray>|</dark_gray> <gray>{player}</gray> <dark_gray>»</dark_gray> <color:#ededed>{message}</color>"
+      ColoredMessages: true
+    NameTag:
+      Active: true
+      Format: "<yellow><b>Pandora</b></yellow> <dark_gray>|</dark_gray> <gray>{player}</gray>"
+      HideOnSneak: false
+    RankPriority: 4
+    Permission: "group.pandora"
+  
+  # ============================================
+  # OBSIDIAN - Rank 2 (Dark Purple)
+  # ============================================
+  obsidian:
+    Tab:
+      Active: true
+      Format: "<dark_purple><b>Obsidian</b></dark_purple> <dark_gray>|</dark_gray> <gray>{player}</gray>"
+      Priority: 3
+    Chat:
+      Active: true
+      Format: "<dark_purple><b>Obsidian</b></dark_purple> <dark_gray>|</dark_gray> <gray>{player}</gray> <dark_gray>»</dark_gray> <color:#ededed>{message}</color>"
+      ColoredMessages: true
+    NameTag:
+      Active: true
+      Format: "<dark_purple><b>Obsidian</b></dark_purple> <dark_gray>|</dark_gray> <gray>{player}</gray>"
+      HideOnSneak: false
+    RankPriority: 3
+    Permission: "group.obsidian"
+  
+  # ============================================
+  # IMPERATOR - Rank 3 (Gold)
+  # ============================================
+  imperator:
+    Tab:
+      Active: true
+      Format: "<gold><b>Imperator</b></gold> <dark_gray>|</dark_gray> <gray>{player}</gray>"
+      Priority: 2
+    Chat:
+      Active: true
+      Format: "<gold><b>Imperator</b></gold> <dark_gray>|</dark_gray> <gray>{player}</gray> <dark_gray>»</dark_gray> <color:#ededed>{message}</color>"
+      ColoredMessages: true
+    NameTag:
+      Active: true
+      Format: "<gold><b>Imperator</b></gold> <dark_gray>|</dark_gray> <gray>{player}</gray>"
+      HideOnSneak: false
+    RankPriority: 2
+    Permission: "group.imperator"
+  
+  # ============================================
+  # DEFAULT - Player Rank (Gray)
+  # ============================================
+  default:
+    Tab:
+      Active: true
+      Format: "<gray>Player</gray> <dark_gray>|</dark_gray> <gray>{player}</gray>"
+      Priority: 1
+    Chat:
+      Active: true
+      Format: "<gray>Player</gray> <dark_gray>|</dark_gray> <gray>{player}</gray> <dark_gray>»</dark_gray> <color:#ededed>{message}</color>"
+      ColoredMessages: false
+    NameTag:
+      Active: true
+      Format: "<gray>Player</gray> <dark_gray>|</dark_gray> <gray>{player}</gray>"
+      HideOnSneak: false
+    RankPriority: 1
+    Permission: null
+
+
+
+
+
+

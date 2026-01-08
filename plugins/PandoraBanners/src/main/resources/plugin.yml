@@ -1,0 +1,25 @@
+name: PandoraBanners
+version: ${project.version}
+main: com.playpandora.pandorabanners.PandoraBanners
+api-version: 1.21
+author: Pandora
+description: ASCII banner spawning plugin
+
+commands:
+  ascii:
+    description: Spawn ASCII banners in different directions
+    usage: /<command> spawn <direction>
+    aliases: [banner]
+    permission: pandorabanners.spawn
+    permission-message: "&e&lPandora &8» &cYou don't have permission to use this command!"
+
+permissions:
+  pandorabanners.spawn:
+    description: Allows spawning ASCII banners
+    default: op
+  pandorabanners.*:
+    description: All PandoraBanners permissions
+    default: op
+    children:
+      pandorabanners.spawn: true
+

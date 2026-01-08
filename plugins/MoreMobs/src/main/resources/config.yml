@@ -1,0 +1,119 @@
+# MoreMobs Configuration
+# Vanilla-Friendly Mob Expansion Plugin
+
+# Smarter, Biome-Based Spawn Logic
+spawn-logic:
+  enabled: true
+  dolphins:
+    enabled: true
+    spawn-weight-near-shipwrecks: 1.5  # Multiplier for spawn weight near shipwrecks
+    curiosity-range-multiplier: 1.3     # Multiplier for curiosity range toward players
+  drowned:
+    enabled: true
+    spawn-multiplier-near-ocean-ruins: 1.4
+    trident-carrier-ratio-boost: 0.1    # Additional chance (0.0-1.0)
+  phantoms:
+    enabled: true
+    spawn-rate-scales-with-insomnia: true
+    regular-sleeper-interval-multiplier: 1.5  # Longer intervals if player sleeps regularly
+  striders:
+    enabled: true
+    extra-spawns-near-lava-lakes: true
+    reduced-random-spawns: true
+    lava-lake-spawn-multiplier: 1.6
+  pillagers:
+    enabled: true
+    patrol-timer-minutes: 5
+    patrol-timer-variance-minutes: 2
+    village-spawn-multiplier: 1.3
+  frogs:
+    enabled: true
+    night-time-swamp-spawn-multiplier: 1.5
+  sniffer:
+    enabled: true
+    rare-passive-spawn: true
+    warm-biome-spawn-chance: 0.001  # Chance per chunk (very rare)
+  breeze:
+    enabled: true
+    trial-chambers-spawn-boost: 1.3
+  bogged:
+    enabled: true
+    trial-chambers-spawn-boost: 1.3
+
+# Better Drops - Vanilla Items Only
+drop-improvements:
+  enabled: true
+  drowned:
+    enabled: true
+    trident-drop-chance-boost: 0.01  # Additional chance (0.0-1.0) - vanilla is ~0.066
+  phantom:
+    enabled: true
+    membrane-drop-multiplier: 1.5
+  goat:
+    enabled: true
+    horn-drop-multiplier: 1.4
+  frog:
+    enabled: true
+    slime-drop-multiplier: 1.6
+  piglin-brute:
+    enabled: true
+    gold-loot-multiplier: 1.3
+  armadillo:
+    enabled: true
+    scute-drop-multiplier: 1.5
+
+# Mob Behavior Buffs (Vanilla Behavior Edits)
+mob-buffs:
+  enabled: true
+  camels:
+    enabled: true
+    jump-height-multiplier: 1.2
+  ravagers:
+    enabled: true
+    can-break-leaves: true
+    can-break-fences: true
+  goats:
+    enabled: true
+    charge-frequency-multiplier: 1.3
+  striders:
+    enabled: true
+    lava-travel-speed-multiplier: 1.25
+  bogged:
+    enabled: true
+    movement-speed-multiplier: 0.85
+  breeze:
+    enabled: true
+    projectile-push-multiplier: 1.3
+
+# World Mini-Events (Vanilla Blocks Only)
+mini-events:
+  enabled: true
+  pillager-mini-raids:
+    enabled: true
+    check-interval-seconds: 300  # Check every 5 minutes
+    spawn-chance: 0.15  # 15% chance per check
+    min-pillagers: 3
+    max-pillagers: 5
+    min-distance-from-village: 32
+    max-distance-from-village: 128
+  strider-hotspots:
+    enabled: true
+    check-interval-seconds: 600  # Check every 10 minutes
+    spawn-chance: 0.1  # 10% chance per check
+    min-striders: 4
+    max-striders: 6
+    min-lava-blocks: 100  # Minimum lava blocks in area
+  axolotl-caves:
+    enabled: true
+    check-interval-seconds: 900  # Check every 15 minutes
+    spawn-chance: 0.05  # 5% chance per check (rare)
+    min-axolotls: 3
+    max-axolotls: 5
+    min-water-blocks: 50
+    max-y-level: 50
+  sniffer-nests:
+    enabled: true
+    enabled-near-wild-sniffers: true
+    moss-patch-radius: 3
+    flower-spawn-chance: 0.3
+

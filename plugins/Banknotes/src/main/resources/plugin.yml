@@ -1,0 +1,46 @@
+name: PandoraBanknotes
+version: ${project.version}
+description: ${project.description}
+author: SainttX
+
+main: com.sainttx.notes.NotesPlugin
+depend: [ Vault ]
+
+commands:
+  note:
+    description: Create or manage banknotes
+    aliases: [ banknote, banknotes, notes, moneynote ]
+    usage: |
+           Create a banknote: /<command> <amount>
+           Admin: /<command> give <player> <amount>
+           Admin: /<command> reload
+  withdraw:
+    description: Withdraw money as a note
+    aliases: [ wd ]
+    usage: |
+           Withdraw money from your bank account as a note.
+           /<command> [amount]
+  deposit:
+    description: Deposit a note
+    aliases: [ dep ]
+
+permissions:
+  banknotes.*:
+    description: Gives access to all Pandora Banknotes commands
+    children:
+      banknotes.withdraw: true
+      banknotes.deposit: true
+      banknotes.reload: true
+      banknotes.give: true
+  banknotes.withdraw:
+    description: Allows you to withdraw banknotes
+    default: true
+  banknotes.deposit:
+    description: Allows you to deposit banknotes
+    default: true
+  banknotes.reload:
+    description: Allows you to reload the plugin
+    default: op
+  banknotes.give:
+    description: Allows you to give banknotes to players
+    default: op

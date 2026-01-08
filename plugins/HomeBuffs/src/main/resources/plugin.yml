@@ -1,0 +1,16 @@
+name: HomeBuffs
+version: 1.0.0
+main: com.playpandora.homebuffs.HomeBuffs
+api-version: 1.21
+author: PlayPandora
+description: Grants buffs when players are near their home
+
+commands:
+  homebuffs:
+    description: Toggle home buffs or view status
+    usage: /<command> [toggle|status]
+    aliases: [hbuffs, hb]
+
+softdepend: [Essentials]
+
+

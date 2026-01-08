@@ -1,0 +1,52 @@
+package com.pandora.spawners.hook.setup;
+
+import java.util.List;
+
+import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+
+import com.bgsoftware.wildtools.api.WildTools;
+import com.bgsoftware.wildtools.api.hooks.DropsProvider;
+
+import com.pandora.spawners.PandoraSpawners;
+import com.pandora.spawners.api.spawner.ISpawner;
+import com.pandora.spawners.configuration.location.LocationRegistry;
+import com.pandora.spawners.spawner.generator.GeneratorRegistry;
+import com.pandora.spawners.utility.reflect.Reflect.RF;
+
+public class SetupWildTools {
+	
+	@SuppressWarnings("deprecation")
+	public static void load(WildTools plugin) {
+		PandoraSpawners.scheduler().runNextTick(task -> {
+			var providers = plugin.getProviders();
+			try {
+				RF.fetch(providers, "dropsProviders", List.class).clear();
+			} catch (Exception x) {
+				RF.debug(x);
+			}
+			providers.addDropsProvider(new SpawnerMetaDropsProvider());
+		});
+	}
+	
+	private static class SpawnerMetaDropsProvider implements DropsProvider {
+		
+		@Override
+		public boolean isSpawnersOnly() {
+			return true;
+		}
+		
+		@Override
+		public List<ItemStack> getBlockDrops(Player player, Block block) {
+			// Obtain spawner items
+			List<ItemStack> items = ISpawner.of(block).toItems();
+
+			// Correctly removing the spawner and its location from the registry
+			LocationRegistry.remove(block);
+			GeneratorRegistry.delete(block);
+			
+			return items;
+		}
+	}
+}

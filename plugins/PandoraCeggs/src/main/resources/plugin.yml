@@ -1,0 +1,23 @@
+name: PandoraCeggs
+version: ${project.version}
+main: com.pandora.ceggs.PandoraCeggs
+api-version: 1.13
+author: Pandora
+description: Custom Creeper Eggs plugin for PandoraBases
+softdepend: [PandoraBases]
+
+commands:
+  ceggs:
+    description: PandoraCeggs command
+    usage: /<command> give <player> <amount>
+    permission: pandoraceggs.admin
+    aliases: [cegg, creeperegg]
+
+permissions:
+  pandoraceggs.admin:
+    description: Admin permission for PandoraCeggs
+    default: op
+  pandoraceggs.use:
+    description: Permission to use creeper eggs
+    default: true
+

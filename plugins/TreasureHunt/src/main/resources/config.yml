@@ -1,0 +1,63 @@
+# TreasureHunt Configuration
+
+# Reward multiplier (2.0 = double rewards)
+reward-multiplier: 2.0
+
+# Level rewards
+levels:
+  enabled: true
+  treasure-claim: 25  # Levels given when treasure is claimed (balanced)
+  hint-claim: 5       # Levels given when hint is claimed (balanced)
+
+# XP rewards (if using LevelPlugin)
+xp:
+  enabled: true
+  treasure-claim: 500.0  # XP given when treasure is claimed (balanced)
+  hint-claim: 100.0       # XP given when hint is claimed (balanced)
+
+# Rewards
+rewards:
+  treasure:
+    money: 10000.0  # Balanced: 2x multiplier already applied
+    items:
+      - "DIAMOND:8"
+      - "GOLD_INGOT:15"
+      - "EMERALD:20"
+  
+  hint:
+    money: 1000.0  # Balanced: 2x multiplier already applied
+    items:
+      - "GOLD_INGOT:3"
+
+# Treasure settings
+treasure:
+  spawn-interval: 36000  # Ticks (30 minutes)
+  max-hints: 5            # Maximum hints before treasure can be claimed
+  hint-distance: 100      # Blocks - distance for hint detection
+
+# Announcements
+announcements:
+  enabled: true
+  hint-distance: true     # Announce how many hints away players are
+  treasure-found: true    # Announce when treasure is found
+  hint-claimed: true      # Announce when hint is claimed
+  reminder: true          # Send periodic reminders about active treasure hunts
+  reminder-interval: 30000 # Ticks between reminders (30000 = 25 minutes)
+
+# Hologram settings
+hologram:
+  enabled: true
+  text: "&e&lTREASURE &7[Right-Click]"  # Text to display above treasure chests
+
+# Messages
+messages:
+  prefix: "&e&lPandora &8» &r"
+  treasure-found: "{prefix} &7You found the treasure!"
+  hint-claimed: "{prefix} &7You claimed a hint! &6+%xp% XP &7| &6$%money% &7| &6+%levels% levels &7| &6%hints% &7hints remaining."
+  treasure-claimed: "{prefix} &7You claimed the treasure! &6+%levels% &7levels and &6$%money%"
+  hint-distance: "{prefix} &7%player% &7is &6%hints% &7hints away from the treasure!"
+  treasure-reminder: "{prefix} &7There is an active treasure hunt! The first hint is at &6X: %x%, Y: %y%, Z: %z% &7in &6%world%&7!"
+  no-treasure: "{prefix} &7No active treasure hunt!"
+  too-far: "{prefix} &7You are too far from the treasure location!"
+
+

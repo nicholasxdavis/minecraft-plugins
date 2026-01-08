@@ -1,0 +1,14 @@
+name: CannonShop
+version: 1.0.0
+main: com.playpandora.cannonshop.CannonShop
+api-version: 1.21
+author: PlayPandora
+description: GUI shop for buying cannons
+softdepend: [Vault, BuildPaste, PandoraCeggs]
+
+commands:
+  cannon:
+    description: Open the cannon shop GUI
+    usage: /<command>
+    aliases: [cannonshop, cshop]
+

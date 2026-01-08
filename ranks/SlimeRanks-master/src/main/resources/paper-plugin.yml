@@ -1,0 +1,37 @@
+name: SlimeRanks
+version: @version@
+main: de.lxca.slimeRanks.Main
+api-version: '1.21'
+prefix: SlimeRanks
+load: STARTUP
+authors: [ Lxca128 ]
+description: Create custom ranks which are displayed in the tab, chat and above the player.
+folia-supported: true
+commands:
+  rankset:
+    description: Set a player's rank easily
+    usage: /<command> <player> <rankname>
+    aliases: [setrank, rank]
+    permission: slimeranks.admin
+permissions:
+  slimeranks.admin:
+    description: Grants access to the /slimeranks command and allows full management of ranks through the GUI.
+    default: op
+dependencies:
+  server:
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    MiniPlaceholders:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    LuckPerms:
+      load: AFTER
+      required: false
+      join-classpath: true
+    Multiverse-Core:
+      load: BEFORE
+      required: false
+      join-classpath: true

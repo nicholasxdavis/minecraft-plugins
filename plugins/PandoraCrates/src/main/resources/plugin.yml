@@ -1,0 +1,43 @@
+name: PandoraCrates
+version: ${project.version}
+main: com.playpandora.pandoracrates.PandoraCrates
+api-version: 1.21
+author: Pandora
+description: Premium crate system with CS:GO style animations
+
+depend: [DecentHolograms]
+softdepend: [PandoraItems, LevelPlugin, PerkShop, PetPlugin, Vault]
+
+commands:
+  pcrates:
+    description: Crate management commands
+    usage: /<command> <subcommand>
+    aliases: [crate]
+    permission: pandoracrates.use
+    permission-message: "&e&lPandora &8» &cYou don't have permission to use this command!"
+  crates:
+    description: Visit the crates area
+    usage: /<command>
+    permission: pandoracrates.use
+    permission-message: "&e&lPandora &8» &cYou don't have permission to use this command!"
+
+permissions:
+  pandoracrates.use:
+    description: Allows using crates
+    default: true
+  pandoracrates.admin:
+    description: Allows managing crates
+    default: op
+  pandoracrates.key.give:
+    description: Allows giving keys
+    default: op
+  pandoracrates.key.bundle:
+    description: Allows bundling keys
+    default: op
+  pandoracrates.preview:
+    description: Allows previewing crates
+    default: true
+  pandoracrates.setholo:
+    description: Allows setting holograms
+    default: op
+

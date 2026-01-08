@@ -1,0 +1,132 @@
+# FarmShop Configuration
+
+# Shop Settings
+shop:
+  title: "&8Farm Shop"
+  size: 54
+
+# Farms
+farms:
+  sugar-cane:
+    name: "&6Sugar Cane Farm"
+    description:
+      - "&7Automated sugar cane farm"
+      - "&7Perfect for sugar production!"
+      - ""
+      - "&7Price: &6${price}"
+      - "&7Required Level: &6${level}"
+    price: 60750  # Increased by 80%
+    required-level: 5
+    paste-id: "v06enTHAk0DdBvIPQ4Vw"
+    item:
+      material: "SUGAR_CANE"
+      display-name: "&6Sugar Cane Farm Placer"
+      lore:
+        - "&7Right-click to place this farm"
+        - "&7at your current location!"
+  
+  melon:
+    name: "&6Melon Farm"
+    description:
+      - "&7Automated melon farm"
+      - "&7Great for food and trading!"
+      - ""
+      - "&7Price: &6${price}"
+      - "&7Required Level: &6${level}"
+    price: 72900  # Increased by 80%
+    required-level: 7
+    paste-id: "FjmKbVhxi3vKKLZd7qH1"
+    item:
+      material: "MELON"
+      display-name: "&6Melon Farm Placer"
+      lore:
+        - "&7Right-click to place this farm"
+        - "&7at your current location!"
+  
+  tree:
+    name: "&6Tree Farm"
+    description:
+      - "&7Automated tree farm"
+      - "&7Endless wood supply!"
+      - ""
+      - "&7Price: &6${price}"
+      - "&7Required Level: &6${level}"
+    price: 85050  # Increased by 80%
+    required-level: 10
+    paste-id: "VU4hZkk81V71dcQanOry"
+    item:
+      material: "OAK_SAPLING"
+      display-name: "&6Tree Farm Placer"
+      lore:
+        - "&7Right-click to place this farm"
+        - "&7at your current location!"
+  
+  chicken:
+    name: "&6Chicken Farm"
+    description:
+      - "&7Automated chicken farm"
+      - "&7Feathers, eggs, and food!"
+      - ""
+      - "&7Price: &6${price}"
+      - "&7Required Level: &6${level}"
+    price: 68040  # Increased by 80%
+    required-level: 6
+    paste-id: "B0N6J1GdpWwrg2GG6mlL"
+    item:
+      material: "EGG"
+      display-name: "&6Chicken Farm Placer"
+      lore:
+        - "&7Right-click to place this farm"
+        - "&7at your current location!"
+  
+  crop-field:
+    name: "&6Automatic Crop Field"
+    description:
+      - "&7Automated crop field"
+      - "&7Perfect for various crops!"
+      - ""
+      - "&7Price: &6${price}"
+      - "&7Required Level: &6${level}"
+    price: 45000  # Cheapest option
+    required-level: 3
+    paste-id: "dnV0sIo3TSdgCKaokMEH"
+    item:
+      material: "WHEAT_SEEDS"
+      display-name: "&6Crop Field Placer"
+      lore:
+        - "&7Right-click to place this farm"
+        - "&7at your current location!"
+  
+  netherwart:
+    name: "&6Netherwart Farm"
+    description:
+      - "&7Automated netherwart farm"
+      - "&7Perfect for potion brewing!"
+      - ""
+      - "&7Price: &6${price}"
+      - "&7Required Level: &6${level}"
+    price: 54000  # Second cheapest
+    required-level: 4
+    paste-id: "iSqHPpTSDIJj7uS2xElR"
+    item:
+      material: "NETHER_WART"
+      display-name: "&6Netherwart Farm Placer"
+      lore:
+        - "&7Right-click to place this farm"
+        - "&7at your current location!"
+
+# Messages
+messages:
+  prefix: "&ePandora"
+  purchase-success: "{prefix} &7You purchased &6{farm} &7farm! Check your inventory for the placer item."
+  insufficient-funds: "{prefix} &7You don't have enough money! You need &6${required} &7but you have &6${balance}"
+  insufficient-level: "{prefix} &7You need to be level &6{level} &7to purchase this farm. You are level &6{current}"
+  no-permission: "{prefix} &7You don't have permission to use this command."
+  farm-placed: "{prefix} &7Farm placed successfully at your location!"
+  farm-already-placed: "{prefix} &7You already have a farm placer in your inventory!"
+  buildpaste-not-found: "{prefix} &7BuildPaste plugin not found! Please contact an administrator."
+  console-command-error: "{prefix} &7Error executing farm placement. Please contact an administrator."
+  cannot-paste-protected: "{prefix} &cYou cannot paste farms in protected areas!"
+  cannot-paste-in-claimed: "{prefix} &cYou cannot paste farms in claimed territories!"
+
+

@@ -1,0 +1,38 @@
+name: MoreWeather
+version: 1.0.0
+main: com.playpandora.moreweather.MoreWeather
+api-version: 1.21
+author: PlayPandora
+description: Advanced weather system that makes weather actually matter with gameplay effects
+
+commands:
+  weather:
+    description: Manage weather settings
+    usage: /<command> [set|clear|status|list]
+    aliases: [mw]
+    permission: moreweather.admin
+  season:
+    description: Manage season settings
+    usage: /<command> [current|set|next]
+    aliases: [seasons]
+    permission: moreweather.admin
+
+permissions:
+  moreweather.admin:
+    description: Full access to weather commands
+    default: op
+  moreweather.*:
+    description: All MoreWeather permissions
+    children:
+      moreweather.admin: true
+    default: op
+
+softdepend: [BaseSystem, HomeBuffs, FarmShop, LevelPlugin, Vault]
+
+
+
+
+
+
+
+

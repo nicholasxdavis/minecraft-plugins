@@ -1,0 +1,144 @@
+# LevelPlugin Configuration
+
+# Auto-save settings
+auto-save-interval-minutes: 5  # How often to auto-save all data (in minutes)
+
+# XP Sources - How much XP players get from different activities
+xp-sources:
+  # Time-based XP (per minute of playtime)
+  playtime:
+    enabled: true
+    xp-per-minute: 1.5
+    check-interval-seconds: 60
+  
+  # Block mining XP
+  blocks:
+    enabled: true
+    default: 0.08  # Default XP for any block
+    ores:
+      coal_ore: 2.0
+      deepslate_coal_ore: 2.0
+      iron_ore: 4.0
+      deepslate_iron_ore: 4.0
+      gold_ore: 8.0
+      deepslate_gold_ore: 8.0
+      diamond_ore: 35.0
+      deepslate_diamond_ore: 35.0
+      emerald_ore: 30.0
+      deepslate_emerald_ore: 30.0
+      lapis_ore: 3.0
+      deepslate_lapis_ore: 3.0
+      redstone_ore: 3.0
+      deepslate_redstone_ore: 3.0
+      nether_gold_ore: 6.0
+      nether_quartz_ore: 5.0
+      ancient_debris: 150.0
+  
+  # Mob kill XP
+  mobs:
+    enabled: true
+    default: 0.8  # Default XP for any mob
+    # LevelledMobs integration - Higher level mobs give more XP
+    use-levelledmobs: true  # Enable integration with LevelledMobs plugin
+    level-multiplier: 0.15  # XP multiplier per level (formula: base_xp * (1 + level * multiplier))
+    # Alternative: Use a custom formula (leave empty to use level-multiplier)
+    # Formula supports: +, -, *, /, parentheses, and %level% variable
+    # Examples: "1 + (%level% * 0.1)" or "%level% * 0.5" or "1 + (%level% - 1) * 0.2"
+    level-formula: ""  # Empty = use level-multiplier, otherwise use this formula
+    debug: false  # Enable debug logging for mob XP (useful for troubleshooting)
+    zombie: 1.5
+    skeleton: 1.5
+    creeper: 2.5
+    spider: 1.2
+    enderman: 4.0
+    witch: 3.0
+    blaze: 4.5
+    ghast: 8.0
+    wither_skeleton: 6.0
+    ender_dragon: 400.0
+    wither: 200.0
+    zombie_pigman: 2.0
+    piglin: 2.5
+    hoglin: 3.0
+    phantom: 2.5
+    guardian: 4.0
+    elder_guardian: 40.0
+    shulker: 5.0
+    evoker: 4.0
+    vindicator: 3.5
+    pillager: 2.5
+    ravager: 8.0
+  
+  # Fishing XP
+  fishing:
+    enabled: true
+    default: 0.8
+    cod: 1.2
+    salmon: 1.5
+    tropical_fish: 2.0
+    pufferfish: 2.5
+    treasure: 8.0
+    junk: 0.4
+  
+  # Crafting XP (per item crafted)
+  crafting:
+    enabled: true
+    xp-per-craft: 0.4
+  
+  # Smelting XP (per item smelted)
+  smelting:
+    enabled: true
+    xp-per-smelt: 0.25
+
+# Level System
+level-system:
+  # XP required for each level (formula: base * (level ^ multiplier))
+  base-xp: 100.0
+  multiplier: 1.15
+  max-level: 100
+  
+  # Alternative: Use fixed XP amounts per level (if multiplier is 0)
+  # fixed-xp-per-level: 150.0
+
+# Level Rewards
+rewards:
+  enabled: true
+  # Rewards given at specific levels
+  levels:
+    5:
+      money: 100.0
+      message: "&ePandora &7You reached level &65&7! &7Reward: &6$100"
+    10:
+      money: 250.0
+      message: "&ePandora &7You reached level &610&7! &7Reward: &6$250"
+    15:
+      money: 500.0
+      message: "&ePandora &7You reached level &615&7! &7Reward: &6$500"
+    20:
+      money: 1000.0
+      message: "&ePandora &7You reached level &620&7! &7Reward: &6$1,000"
+    25:
+      money: 2000.0
+      message: "&ePandora &7You reached level &625&7! &7Reward: &6$2,000"
+    30:
+      money: 3000.0
+      message: "&ePandora &7You reached level &630&7! &7Reward: &6$3,000"
+    50:
+      money: 10000.0
+      message: "&ePandora &7You reached level &650&7! &7Reward: &6$10,000"
+    75:
+      money: 25000.0
+      message: "&ePandora &7You reached level &675&7! &7Reward: &6$25,000"
+    100:
+      money: 50000.0
+      message: "&ePandora &7You reached level &6100&7! &7Reward: &6$50,000"
+
+# Messages
+messages:
+  prefix: "&ePandora"
+  level-up: "{prefix} &7Level Up! &6Level {level}"
+  xp-summary: "{prefix} &7XP earned in last 5 minutes: &6{xp} &7XP"
+  level-info: "{prefix} &7Level: &6{level} &7| XP: &6{current_xp}&7/&6{required_xp} &7(&6{percent}%&7)"
+  no-permission: "{prefix} &7You don't have permission to use this command."
+  player-not-found: "{prefix} &7Player not found."
+

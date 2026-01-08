@@ -1,0 +1,92 @@
+# PandoraOnevsOne Configuration
+
+# Visual settings
+visuals:
+  prefix: "&e&lPandora &8» &r"
+  header: "&e&l"
+  highlight: "&6"
+  text: "&7"
+  error: "&c"
+  special: "&e"
+
+# Arena settings
+arena:
+  # Arena location (set via /onevsone set arena)
+  world: ""
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+  # Spawn points for player 1 and player 2
+  spawn1:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    yaw: 0.0
+    pitch: 0.0
+  spawn2:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    yaw: 0.0
+    pitch: 0.0
+
+# Duel settings
+duel:
+  # Maximum time for a duel in seconds (5 minutes = 300 seconds)
+  max-time: 300
+  # Time before starting duel (countdown)
+  countdown: 5
+  
+# Kit settings
+kit:
+  # Armor
+  armor:
+    helmet: NETHERITE_HELMET
+    chestplate: NETHERITE_CHESTPLATE
+    leggings: NETHERITE_LEGGINGS
+    boots: NETHERITE_BOOTS
+    armor-enchanted: true
+  
+  # Weapons
+  weapons:
+    sword: NETHERITE_SWORD
+    bow: BOW
+    arrows: 64
+  
+  # Items
+  items:
+    golden-apples: 5
+    potions:
+      - SPEED:2:1
+      - STRENGTH:2:1
+      - INSTANT_HEAL:2:1
+
+# Queue settings
+queue:
+  # Only allow one duel at a time
+  max-concurrent-duels: 1
+
+# Messages
+messages:
+  arena-set: "&7Arena location set!"
+  arena-not-set: "&cArena location not set! Use /onevsone set arena"
+  challenge-sent: "&7Challenge sent to &6{player}&7!"
+  challenge-received: "&7You have been challenged by &6{player}&7! Use &6/onevsone accept&7 to accept."
+  challenge-accepted: "&7Challenge accepted! Starting duel..."
+  challenge-not-found: "&cNo pending challenge found!"
+  already-in-duel: "&cYou are already in a duel!"
+  already-in-queue: "&cA duel is already in progress! Please wait."
+  duel-started: "&7Duel started! Good luck!"
+  duel-ended: "&7Duel ended!"
+  duel-timeout: "&cDuel timed out!"
+  left-duel: "&7You left the duel."
+  no-permission: "&cYou don't have permission to use this command!"
+  only-in-1v1: "&cYou can only use this command in a 1v1 duel!"
+
+# Auto-save settings
+auto-save:
+  interval: 1200
+
+

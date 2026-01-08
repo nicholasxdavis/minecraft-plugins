@@ -1,0 +1,27 @@
+name: EssentialsGUI
+version: 1.0.0
+main: com.playpandora.essentialsgui.EssentialsGUI
+api-version: 1.21
+author: PlayPandora
+description: GUI interface for Essentials warps and homes
+
+commands:
+  warp:
+    description: Open warp GUI or use Essentials warp commands
+    usage: /<command> [warpname|open|gui]
+    aliases: [warps]
+  home:
+    description: Open home GUI or use Essentials home commands
+    usage: /<command> [homename|open|gui]
+    aliases: [homes]
+  kit:
+    description: Open kit GUI or use Essentials kit commands
+    usage: /<command> [kitname|open|gui|list]
+    aliases: [kits]
+  rules:
+    description: View server rules
+    usage: /<command>
+
+softdepend: [Essentials]
+
+

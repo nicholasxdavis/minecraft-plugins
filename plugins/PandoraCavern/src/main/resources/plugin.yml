@@ -1,0 +1,21 @@
+name: PandoraCavern
+version: ${project.version}
+main: com.playpandora.pandoracavern.PandoraCavern
+api-version: 1.21
+author: Pandora
+description: Special netherite ore cavern system with respawning blocks
+
+commands:
+  cavern:
+    description: Cavern management commands
+    usage: /<command> <subcommand>
+    permission: pandoracavern.admin
+    permission-message: "&e&lPandora &8» &cYou don't have permission to use this command!"
+
+permissions:
+  pandoracavern.admin:
+    description: Allows managing cavern blocks
+    default: op
+
+
+

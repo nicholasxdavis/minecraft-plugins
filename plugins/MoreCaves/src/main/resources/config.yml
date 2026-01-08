@@ -1,0 +1,177 @@
+# MoreCaves Configuration
+
+features:
+  # Mob Behavior Tweaks
+  creeper-behavior:
+    enabled: true
+    silent-until-blocks: 4
+    sprint-distance: 4
+    pair-spawn-chance: 0.25  # 25%
+  
+  zombie-behavior:
+    enabled: true
+    tunnel-speed-multiplier: 1.25  # +25%
+    sprint-burst-chance: 0.1  # 10%
+    sprint-burst-interval: 100  # ticks (5 seconds)
+    group-aggro-sync: true
+  
+  skeleton-behavior:
+    enabled: true
+    hold-long-range: true
+    prioritize-high-ground: true
+    accuracy-multiplier: 1.3  # +30%
+    sniper-squad-size: 3
+  
+  spider-behavior:
+    enabled: true
+    wall-climb-more: true
+    ceiling-drop: true
+    lush-cave-clusters: true
+  
+  endermite-behavior:
+    enabled: true
+    pearl-mining-spawn: true
+    aggro-radius-multiplier: 1.5  # +50%
+  
+  # Spawn Rate Adjustments
+  spawn-rates:
+    enabled: true
+    low-light-multiplier: 1.3  # +30% at LL <= 5
+    zombie-group-spawn: true
+    skeleton-spacing: true
+    creeper-increase: 1.2  # +20%
+    spider-lush-cave-multiplier: 1.5  # +50%
+    silverfish-stronghold-multiplier: 1.3  # +30%
+  
+  # Drop Rate Increases
+  drop-rates:
+    enabled: true
+    zombie-iron-multiplier: 1.4  # +40%
+    skeleton-arrow-bone-multiplier: 1.5  # +50%
+    creeper-gunpowder-multiplier: 1.35  # +35%
+    spider-string-multiplier: 1.4  # +40%
+  
+  # Ore Generation
+  ore-generation:
+    enabled: true
+    depth-based-riches: true
+    super-vein-chance: 0.05  # 5% per chunk
+    quartz-multiplier: 1.3  # +30%
+    copper-multiplier: 1.3  # +30%
+    diamond-deepslate-multiplier: 1.2  # +20%
+  
+  # Archaeology
+  archaeology:
+    enabled: true
+    suspicious-gravel-multiplier: 1.25  # +25%
+    valuable-find-chance: 1.3  # +30% chance
+  
+  # Phase 2: Horror Systems
+  horror-atmosphere:
+    enabled: true
+    cave-ambience:
+      enabled: true
+      warden-heartbeat-chance: 0.1  # 10% in Deep Dark
+      zombie-echo-chance: 0.03  # 3% per check
+      bat-squeak-chance: 0.05  # 5% per check
+      dripstone-impact-chance: 0.02  # 2% per check
+      check-interval-ticks: 40  # Check every 2 seconds
+    darkness-pressure:
+      enabled: true
+      enhanced-spawns: true  # Builds on Phase 1
+      psychological-pressure: true
+  
+  # Enhanced Mob Behaviors (builds on Phase 1)
+  enhanced-behaviors:
+    enabled: true
+    creeper:
+      no-hiss-until-detonation: true
+      silent-approach: true
+    zombie:
+      enhanced-group-sync: true
+    skeleton:
+      enhanced-sniper-squads: true
+    spider:
+      enhanced-ceiling-drops: true
+  
+  # Phase 3: Events & World Features
+  events:
+    enabled: true
+    swarm-room:
+      enabled: true
+      zombie-count: 15  # 10-20
+      skeleton-count: 12
+      duration-seconds: 30
+      trigger-chance: 0.05
+      check-interval-seconds: 200
+      loud-ambient-cue: true
+      drop-multiplier: 1.8  # +80%
+    creeper-trap:
+      enabled: true
+      creeper-count: 3  # 2-3
+      dead-end-only: true
+      jump-scare: true
+      gunpowder-multiplier: 2.0  # 2x
+    bat-flock:
+      enabled: true
+      bat-count: 20  # 10-30
+      warning-before-events: true
+      duration-seconds: 10
+      trigger-chance: 0.03
+      check-interval-seconds: 150
+    dripstone-death-zone:
+      enabled: true
+      heavy-clusters: true
+      lava-pockets: true
+      skeleton-snipers: true
+      risk-reward: true
+    silverfish-hive:
+      enabled: true
+      infested-blocks: 10  # 5-15
+      massive-release: true
+      trigger-on-break: true
+  
+  # Phase 4: Advanced Mechanics
+  advanced-ai:
+    enabled: true
+    zombie:
+      true-group-sync: true
+      formation-attacks: true
+    skeleton:
+      sniper-coordination: true
+      covering-fire: true
+    creeper:
+      coordinated-detonation: true
+      timing-sync: true
+    spider:
+      web-trap-coordination: true
+      ceiling-ambush: true
+  
+  # Smart Ore Generation
+  smart-ore-generation:
+    enabled: true
+    avoid-lava: true
+    maximize-exposure: true
+    depth-based-scaling: true
+    chunk-distribution: true
+  
+  # Event Chains
+  event-chains:
+    enabled: true
+    allow-chains: true
+    max-chain-length: 3
+    trigger-on-mining: true
+    trigger-on-exploring: true
+    dynamic-difficulty: true
+
+# Plugin Integrations
+integrations:
+  levelplugin:
+    enabled: true
+    cave-xp-multiplier: 1.3  # 1.3x XP for kills in caves
+  levelledmobs:
+    enabled: true
+    apply-levels: true  # Apply LevelledMobs to spawned mobs
+  quest-system:
+    enabled: true  # Integrate with qab.sk quest system
+
